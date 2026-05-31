@@ -1,19 +1,21 @@
 import { useState } from 'react';
 import { useStore } from '../lib/store';
+import { useT } from '../lib/useT';
 
 export default function QuestsPanel() {
   const quests = useStore((s) => s.todaysQuests)();
   const counters = useStore((s) => s.quest.counters);
   const claimed = useStore((s) => s.quest.claimed);
   const claim = useStore((s) => s.claimQuest);
+  const { t } = useT();
   const [pop, setPop] = useState<string | null>(null);
 
   return (
     <section className="card mb-4 p-4">
       <div className="mb-2 flex items-center justify-between">
-        <h2 className="font-bold">📜 Wyzwania dnia</h2>
+        <h2 className="font-bold">{t('quests.title')}</h2>
         <span className="chip bg-white/5 text-white/60">
-          {claimed.length}/{quests.length} odebrane
+          {t('quests.claimed', { a: claimed.length, b: quests.length })}
         </span>
       </div>
       <div className="space-y-2">
@@ -39,7 +41,7 @@ export default function QuestsPanel() {
                     }}
                     className="chip bg-brand text-white shadow-glow animate-pop"
                   >
-                    Odbierz +{quest.rewardCoins}💎
+                    {t('quests.claim')} +{quest.rewardCoins}💎
                   </button>
                 ) : (
                   <span className="chip bg-white/5 text-white/50">

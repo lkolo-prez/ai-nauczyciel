@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useStore } from '../lib/store';
+import { useT } from '../lib/useT';
 import Ring from './Ring';
 
 function daysUntil(iso: string): number {
@@ -13,6 +14,7 @@ export default function GoalCard() {
   const dailyGoalXp = useStore((s) => s.dailyGoalXp);
   const setGoal = useStore((s) => s.setGoal);
   const todayXp = useStore((s) => s.todayXp)();
+  const { t } = useT();
   const [editing, setEditing] = useState(false);
 
   const goalPct = Math.min(1, todayXp / dailyGoalXp);
@@ -23,19 +25,19 @@ export default function GoalCard() {
       <div className="flex items-center gap-4">
         <Ring value={goalPct} size={72} color={goalPct >= 1 ? '#34d399' : '#7c5cff'} label={`${todayXp}`} />
         <div className="flex-1">
-          <div className="text-sm font-bold">Cel dnia: {dailyGoalXp} XP</div>
+          <div className="text-sm font-bold">{t('goal.dayGoal', { n: dailyGoalXp })}</div>
           {goalPct >= 1 ? (
-            <div className="text-xs font-semibold text-good">✅ Cel osiągnięty! Tak trzymaj 🔥</div>
+            <div className="text-xs font-semibold text-good">{t('goal.reached')}</div>
           ) : (
-            <div className="text-xs text-white/55">Jeszcze {Math.max(0, dailyGoalXp - todayXp)} XP do celu</div>
+            <div className="text-xs text-white/55">{t('goal.toGo', { n: Math.max(0, dailyGoalXp - todayXp) })}</div>
           )}
           {left !== null ? (
             <button onClick={() => setEditing((v) => !v)} className="mt-1 text-xs text-brand-400">
-              ⏳ {left > 0 ? `${left} dni do egzaminu` : 'Dziś egzamin! Powodzenia 🍀'} • zmień
+              {left > 0 ? t('goal.daysLeft', { n: left }) : t('goal.examToday')}
             </button>
           ) : (
             <button onClick={() => setEditing(true)} className="mt-1 text-xs text-brand-400">
-              🎯 Ustaw datę egzaminu →
+              {t('goal.setExam')}
             </button>
           )}
         </div>

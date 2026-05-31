@@ -39,6 +39,7 @@ edukacyjne wcześniej niż nauczyciel. To właśnie robi ten projekt.
 | 📜 **Questy, combo, skrzynie** | Dzienne wyzwania, mnożnik za serię, waluta i skrzynie z losową nagrodą |
 | ⚔️ **Egzamin-boss** | Test na czas z dużą nagrodą — emocje prawdziwego egzaminu |
 | 👪 **Tryb rodzica** | Czytelny raport postępów bez konieczności rozumienia przedmiotu |
+| 🌍 **Wielojęzyczność** | Interfejs PL / EN / 🇺🇦 UK — m.in. dla uczniów z Ukrainy |
 
 ## 📚 Przedmioty (MVP — Etap 1)
 
