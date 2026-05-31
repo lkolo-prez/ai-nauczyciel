@@ -32,7 +32,7 @@ ze statusem implementacji. Legenda: ✅ działa · 🟡 częściowo · 🔮 plan
 | 19 | **Portfolio** | 🔮 | projekty, prezentacje, filmy |
 | 20 | **AI rekrutacja do szkół** | 🔮 | szanse, progi punktowe, ranking szkół |
 | 21 | **Tryb offline** | 🟡 | PWA + localStorage działają offline; pełny offline-first — plan |
-| 22 | **Multijęzykowość** | 🔮 | PL teraz; EN, UA, DE — warstwa i18n |
+| 22 | **Multijęzykowość** | 🟡 | PL/EN/UK: `src/lib/i18n.ts`, `useT.ts`, przełącznik flag; DE i pełne pokrycie UI — plan |
 | 23 | **Integracje** | 🔮 | mObywatel, dzienniki elektroniczne, LMS, M365, Google Workspace, Moodle |
 | 24 | **AI dla nauczycieli** | 🟡 | generator sprawdzianów z kluczem i drukiem: `pages/Generator.tsx`; konspekty/prezentacje — plan |
 | 25 | **AI dla szkół** | 🔮 | sekretariat, dokumenty, plany zajęć, raporty |
