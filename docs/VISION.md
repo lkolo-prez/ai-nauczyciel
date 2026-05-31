@@ -13,13 +13,13 @@ ze statusem implementacji. Legenda: ✅ działa · 🟡 częściowo · 🔮 plan
 |---|---------|--------|--------------------------|
 | 1 | **Cyfrowy bliźniak ucznia** | ✅ | `src/lib/cognitive.ts` — mastery, typy błędów, ryzyko, tempo |
 | 2 | **Mapa wiedzy (graf)** | ✅ | `data/knowledge-graph.json` + `pages/KnowledgeMap.tsx` |
-| 3 | **AI Tutor (tekst/głos/zdjęcie/ekran)** | 🟡 | tekst: `src/lib/ai.ts`; głos i zrzuty — seam pod LLM |
+| 3 | **AI Tutor (tekst/głos/zdjęcie/ekran)** | 🟡 | tekst + **głos** (Web Speech API): `src/lib/ai.ts`, `src/lib/speech.ts`; zdjęcia/ekran — plan |
 | 4 | **Analiza odręcznych rozwiązań (OCR)** | 🔮 | model multimodalny: odczyt pisma → wykrycie błędnego kroku |
 | 5 | **Tryb TikTok (feed)** | ✅ | `data/micro-lessons.json` + `pages/Feed.tsx` |
 | 6 | **RPG (poziomy, XP, klasy)** | ✅ | `src/lib/store.ts`, `pages/Profile.tsx` |
 | 7 | **Gildie i rankingi** | 🟡 | ligi tygodniowe + ranking: `src/lib/engagement.ts`; gildie/klasy — plan |
 | 8 | **Symulator egzaminu** | ✅ | `pages/Simulator.tsx`, `projectScore()` |
-| 9 | **Generator egzaminów** | 🟡 | `pages/Exam.tsx` + `adaptive.ts`; warianty klasowe/szkolne — plan |
+| 9 | **Generator egzaminów** | ✅ | `pages/Generator.tsx` — wybór tematów/trudności, klucz, druk PDF; + `pages/Exam.tsx` |
 | 10 | **Analiza wszystkich arkuszy** | 🟡 | katalog 2019–2025 + próbne: `data/exams.json`; analiza częstotliwości — plan |
 | 11 | **AI psycholog nauki** | ✅ | `burnoutRisk()` w `cognitive.ts` |
 | 12 | **Rodzic AI** | ✅ | `pages/Parent.tsx` — raport bez żargonu |
@@ -34,7 +34,7 @@ ze statusem implementacji. Legenda: ✅ działa · 🟡 częściowo · 🔮 plan
 | 21 | **Tryb offline** | 🟡 | PWA + localStorage działają offline; pełny offline-first — plan |
 | 22 | **Multijęzykowość** | 🔮 | PL teraz; EN, UA, DE — warstwa i18n |
 | 23 | **Integracje** | 🔮 | mObywatel, dzienniki elektroniczne, LMS, M365, Google Workspace, Moodle |
-| 24 | **AI dla nauczycieli** | 🔮 | generowanie sprawdzianów, kartkówek, konspektów, prezentacji |
+| 24 | **AI dla nauczycieli** | 🟡 | generator sprawdzianów z kluczem i drukiem: `pages/Generator.tsx`; konspekty/prezentacje — plan |
 | 25 | **AI dla szkół** | 🔮 | sekretariat, dokumenty, plany zajęć, raporty |
 
 ## 🧱 Architektura warstwowa

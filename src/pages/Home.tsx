@@ -221,7 +221,17 @@ export default function Home() {
         <Link to="/tutor" className="card flex flex-col gap-1 p-4 transition hover:bg-card">
           <span className="text-2xl">🤖</span>
           <span className="font-semibold">Nauczyciel AI</span>
-          <span className="text-[11px] text-white/50">Pytaj o wszystko</span>
+          <span className="text-[11px] text-white/50">Mów lub pisz</span>
+        </Link>
+        <Link to="/generator" className="card flex flex-col gap-1 p-4 transition hover:bg-card">
+          <span className="text-2xl">🛠️</span>
+          <span className="font-semibold">Generator testów</span>
+          <span className="text-[11px] text-white/50">Sprawdzian w PDF</span>
+        </Link>
+        <Link to="/rodzic" className="card flex flex-col gap-1 p-4 transition hover:bg-card">
+          <span className="text-2xl">👪</span>
+          <span className="font-semibold">Tryb rodzica</span>
+          <span className="text-[11px] text-white/50">Raport postępów</span>
         </Link>
       </section>
     </div>
