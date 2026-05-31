@@ -9,6 +9,7 @@ import Simulator from './pages/Simulator';
 import Profile from './pages/Profile';
 import Exam from './pages/Exam';
 import Parent from './pages/Parent';
+import Generator from './pages/Generator';
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
           <Route path="/symulator" element={<Simulator />} />
           <Route path="/egzamin" element={<Exam />} />
           <Route path="/rodzic" element={<Parent />} />
+          <Route path="/generator" element={<Generator />} />
           <Route path="/profil" element={<Profile />} />
         </Routes>
       </main>

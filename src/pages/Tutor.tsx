@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { generateReply } from '../lib/ai';
 import type { TutorReply } from '../lib/ai';
 import { useStore } from '../lib/store';
+import { listenOnce, speak, stopSpeaking, speechSupported, ttsSupported } from '../lib/speech';
 
 interface Msg {
   role: 'user' | 'ai';
@@ -15,29 +16,68 @@ export default function Tutor() {
   const [msgs, setMsgs] = useState<Msg[]>([
     {
       role: 'ai',
-      text: 'Cześć! Jestem Twoim nauczycielem AI 🤖. Wytłumaczę temat, znajdę Twoje luki i dam zadanie. Od czego zaczynamy?',
+      text: 'Cześć! Jestem Twoim nauczycielem AI 🤖. Wytłumaczę temat, znajdę Twoje luki i dam zadanie. Możesz pisać albo mówić do mnie. Od czego zaczynamy?',
       reply: { text: '', suggestions: ['Od czego zacząć?', 'Nie rozumiem pierwiastków', 'Daj mi zadanie z procentów'] },
     },
   ]);
   const [input, setInput] = useState('');
+  const [listening, setListening] = useState(false);
+  const [voiceOn, setVoiceOn] = useState(false);
   const endRef = useRef<HTMLDivElement>(null);
+  const canListen = speechSupported();
+  const canSpeak = ttsSupported();
 
   useEffect(() => {
     endRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [msgs]);
+
+  // Clean up any ongoing speech when leaving the screen.
+  useEffect(() => () => stopSpeaking(), []);
 
   const send = (text: string) => {
     if (!text.trim()) return;
     const reply = generateReply(text, state);
     setMsgs((m) => [...m, { role: 'user', text }, { role: 'ai', text: reply.text, reply }]);
     setInput('');
+    if (voiceOn) speak(reply.text);
+  };
+
+  const toggleMic = () => {
+    if (listening) return;
+    setListening(true);
+    const listener = listenOnce(
+      (text) => {
+        setInput('');
+        send(text);
+      },
+      () => setListening(false),
+      () => setListening(false),
+    );
+    if (!listener) setListening(false);
+  };
+
+  const toggleVoice = () => {
+    const next = !voiceOn;
+    setVoiceOn(next);
+    if (!next) stopSpeaking();
   };
 
   return (
     <div className="flex h-full flex-col">
-      <header className="border-b border-white/5 p-4">
-        <h1 className="text-lg font-extrabold">🤖 Nauczyciel AI</h1>
-        <p className="text-[11px] text-white/50">Działa offline na otwartej bazie wiedzy. Gotowy na podpięcie modelu głosowego i analizy zdjęć zeszytu.</p>
+      <header className="flex items-center justify-between border-b border-white/5 p-4">
+        <div>
+          <h1 className="text-lg font-extrabold">🤖 Nauczyciel AI</h1>
+          <p className="text-[11px] text-white/50">Działa offline na otwartej bazie wiedzy. Mów lub pisz.</p>
+        </div>
+        {canSpeak && (
+          <button
+            onClick={toggleVoice}
+            className={`chip ${voiceOn ? 'bg-brand text-white' : 'bg-white/5 text-white/60'}`}
+            title="Czytaj odpowiedzi na głos"
+          >
+            {voiceOn ? '🔊 Głos wł.' : '🔈 Głos wył.'}
+          </button>
+        )}
       </header>
 
       <div className="no-scrollbar flex-1 space-y-3 overflow-y-auto p-4">
@@ -96,6 +136,11 @@ export default function Tutor() {
         <div ref={endRef} />
       </div>
 
+      {listening && (
+        <div className="px-4 pb-1 text-center text-xs font-semibold text-brand-400 animate-pop">
+          🎙️ Słucham… mów teraz
+        </div>
+      )}
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -103,10 +148,21 @@ export default function Tutor() {
         }}
         className="flex gap-2 border-t border-white/5 p-3"
       >
+        {canListen && (
+          <button
+            type="button"
+            onClick={toggleMic}
+            className={`btn px-3 ${listening ? 'bg-bad text-white animate-pulse' : 'bg-white/5 text-white/80 hover:bg-white/10'}`}
+            title="Mów do nauczyciela"
+            aria-label="Mów do nauczyciela"
+          >
+            🎙️
+          </button>
+        )}
         <input
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="Napisz, czego nie rozumiesz…"
+          placeholder={canListen ? 'Napisz lub naciśnij 🎙️…' : 'Napisz, czego nie rozumiesz…'}
           className="flex-1 rounded-xl bg-white/5 px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-brand"
         />
         <button type="submit" className="btn-brand px-4">➤</button>
