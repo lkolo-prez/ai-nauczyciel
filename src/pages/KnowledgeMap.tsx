@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
-import { subjects, nodeById, dependentsOf, lessonsBySubject } from '../data';
+import { subjects, subjectById, nodeById, dependentsOf, questionsByNode } from '../data';
 import { useStore } from '../lib/store';
 import { effectiveMastery } from '../lib/cognitive';
 import KnowledgeGraphView from '../components/KnowledgeGraphView';
@@ -14,17 +14,21 @@ export default function KnowledgeMap() {
   const [selected, setSelected] = useState<KnowledgeNode | null>(null);
 
   const mastery = (id: string) => effectiveMastery(s, id);
+  const activeSubject = subjectById.get(subject);
 
   return (
     <div className="p-4">
-      <header className="mb-3">
-        <h1 className="text-lg font-extrabold">🗺️ Mapa wiedzy</h1>
-        <p className="text-[11px] text-white/50">
-          Graf zależności umiejętności. Strzałka A→B: „żeby ogarnąć B, najpierw A".
-        </p>
+      <header className="mb-3 flex items-start justify-between">
+        <div>
+          <h1 className="text-lg font-extrabold">🗺️ Mapa wiedzy</h1>
+          <p className="text-[11px] text-white/50">
+            Graf zależności umiejętności. Strzałka A→B: „żeby ogarnąć B, najpierw A".
+          </p>
+        </div>
+        <Link to="/przedmioty" className="chip bg-white/5 text-white/60">📂 Przedmioty</Link>
       </header>
 
-      <div className="mb-3 flex gap-2">
+      <div className="no-scrollbar mb-3 flex gap-2 overflow-x-auto pb-1">
         {subjects.map((sub) => (
           <button
             key={sub.id}
@@ -32,14 +36,17 @@ export default function KnowledgeMap() {
               setSubject(sub.id);
               setSelected(null);
             }}
-            className={`chip border ${
+            className={`chip shrink-0 border ${
               subject === sub.id ? 'border-brand bg-brand/20 text-white' : 'border-white/10 bg-white/5 text-white/60'
             }`}
           >
-            {sub.icon} {sub.shortName}
+            {sub.icon} {sub.shortName}{sub.exam ? ' ⭐' : ''}
           </button>
         ))}
       </div>
+      {activeSubject && (
+        <div className="mb-3 text-xs text-white/45">{activeSubject.name} • {activeSubject.grades}</div>
+      )}
 
       <div className="card p-3">
         <KnowledgeGraphView
@@ -85,11 +92,14 @@ export default function KnowledgeMap() {
           )}
 
           <div className="flex gap-2">
-            <Link to="/cwicz" state={{ nodeId: selected.id }} className="btn-brand flex-1 text-sm">
-              Ćwicz ten temat 🎯
-            </Link>
-            {lessonsBySubject(subject).some((l) => l.nodeId === selected.id) && (
-              <Link to="/feed" className="btn-ghost text-sm">Mikrolekcja</Link>
+            {questionsByNode(selected.id).length > 0 ? (
+              <Link to="/cwicz" state={{ nodeId: selected.id }} className="btn-brand flex-1 text-sm">
+                Ćwicz ten temat 🎯
+              </Link>
+            ) : (
+              <div className="flex-1 rounded-xl bg-white/5 px-3 py-2.5 text-center text-xs text-white/45">
+                Zadania w przygotowaniu — wkrótce
+              </div>
             )}
           </div>
         </div>

@@ -61,6 +61,8 @@ const pl: Dict = {
 
   'tiles.feed': 'Feed wiedzy',
   'tiles.feedSub': 'Nauka jak TikTok',
+  'tiles.subjects': 'Przedmioty',
+  'tiles.subjectsSub': 'Cała podstawa IV–VIII',
   'tiles.simulator': 'Symulator',
   'tiles.simulatorSub': 'Twój przyszły wynik',
   'tiles.map': 'Mapa wiedzy',
@@ -145,6 +147,8 @@ const en: Dict = {
 
   'tiles.feed': 'Knowledge feed',
   'tiles.feedSub': 'Learn like TikTok',
+  'tiles.subjects': 'Subjects',
+  'tiles.subjectsSub': 'Full IV–VIII curriculum',
   'tiles.simulator': 'Simulator',
   'tiles.simulatorSub': 'Your future score',
   'tiles.map': 'Knowledge map',
@@ -229,6 +233,8 @@ const uk: Dict = {
 
   'tiles.feed': 'Стрічка знань',
   'tiles.feedSub': 'Навчання як TikTok',
+  'tiles.subjects': 'Предмети',
+  'tiles.subjectsSub': 'Уся програма IV–VIII',
   'tiles.simulator': 'Симулятор',
   'tiles.simulatorSub': 'Твій майбутній результат',
   'tiles.map': 'Карта знань',

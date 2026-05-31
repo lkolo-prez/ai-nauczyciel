@@ -37,8 +37,9 @@ rynku pracy** — budując po drodze jego cyfrowy model poznawczy. Pełna,
 
 ## 🔜 Etap 2 — Pełna szkoła podstawowa (klasy 4–8)
 
-- [ ] Graf wiedzy całej podstawy programowej IV–VIII
-- [ ] Treści dla klas 4–7 (nie tylko egzaminacyjne)
+- [x] **Wszystkie przedmioty podstawy IV–VIII** w bazie (17 przedmiotów, 6 obszarów) + przeglądarka `pages/Subjects.tsx`
+- [x] **Graf wiedzy całej podstawy** — 79 węzłów obejmujących też biologię, geografię, chemię, fizykę, historię, WOS, informatykę, niemiecki, przedmioty artystyczne i EDB
+- [ ] Bank zadań i mikrolekcje dla przedmiotów nieegzaminacyjnych
 - [ ] Ścieżki międzyklasowe (np. ułamki w kl. 5 → procenty w kl. 6)
 - [ ] Import wymagań z oficjalnych źródeł (ZPE, MEN) do schematu grafu
 

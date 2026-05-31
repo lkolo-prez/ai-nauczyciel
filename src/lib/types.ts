@@ -6,10 +6,16 @@ export interface Subject {
   shortName: string;
   color: string;
   icon: string;
-  examMinutes: number;
-  maxPoints: number;
   stage: string;
   description: string;
+  /** Egzamin ósmoklasisty subject? Drives the exam-focused views. */
+  exam?: boolean;
+  /** Curriculum area grouping for the subject browser. */
+  area?: string;
+  /** Grades the subject is taught in, e.g. "IV–VIII". */
+  grades?: string;
+  examMinutes?: number;
+  maxPoints?: number;
 }
 
 export interface KnowledgeNode {

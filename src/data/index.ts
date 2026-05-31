@@ -16,6 +16,10 @@ import type {
 } from '../lib/types';
 
 export const subjects = subjectsRaw.subjects as Subject[];
+// Exam-focused subset (egzamin ósmoklasisty) — drives the cognitive-twin views.
+export const examSubjects = subjects.filter((s) => s.exam);
+export const areas = (subjectsRaw.areas ?? []) as { id: string; name: string; color: string }[];
+export const subjectsByArea = (areaId: string) => subjects.filter((s) => s.area === areaId);
 export const nodes = graphRaw.nodes as KnowledgeNode[];
 export const lessons = lessonsRaw.lessons as MicroLesson[];
 export const questions = questionsRaw.questions as Question[];

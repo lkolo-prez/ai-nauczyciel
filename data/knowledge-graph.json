@@ -41,6 +41,66 @@
     { "id": "ang.gramatyka", "subject": "angielski", "name": "Środki językowe (gramatyka)", "tier": 2, "difficulty": 4, "examWeight": 4, "prereq": ["ang.slownictwo"], "summary": "Czasy, przedimki, przyimki, stopniowanie, słowotwórstwo." },
     { "id": "ang.czasy", "subject": "angielski", "name": "Czasy gramatyczne", "tier": 3, "difficulty": 4, "examWeight": 4, "prereq": ["ang.gramatyka"], "summary": "Present Simple/Continuous, Past Simple, Present Perfect, future (will/going to) — słowa-sygnały." },
     { "id": "ang.slowotworstwo", "subject": "angielski", "name": "Słowotwórstwo", "tier": 3, "difficulty": 4, "examWeight": 3, "prereq": ["ang.gramatyka"], "summary": "Tworzenie wyrazów: przedrostki i przyrostki (-tion, -ful, -less, un-), rzeczownik↔przymiotnik↔czasownik." },
-    { "id": "ang.pisanie", "subject": "angielski", "name": "Wypowiedź pisemna", "tier": 3, "difficulty": 4, "examWeight": 5, "prereq": ["ang.gramatyka", "ang.funkcje"], "summary": "Krótki e-mail/wpis: realizacja 3 punktów polecenia, spójność, poprawność." }
+    { "id": "ang.pisanie", "subject": "angielski", "name": "Wypowiedź pisemna", "tier": 3, "difficulty": 4, "examWeight": 5, "prereq": ["ang.gramatyka", "ang.funkcje"], "summary": "Krótki e-mail/wpis: realizacja 3 punktów polecenia, spójność, poprawność." },
+
+    { "id": "nie.slownictwo", "subject": "niemiecki", "name": "Słownictwo podstawowe", "tier": 0, "difficulty": 2, "examWeight": 3, "prereq": [], "summary": "Powitania, liczby, rodzina, kolory, dni tygodnia — fundament komunikacji." },
+    { "id": "nie.gramatyka", "subject": "niemiecki", "name": "Podstawy gramatyki", "tier": 1, "difficulty": 3, "examWeight": 3, "prereq": ["nie.slownictwo"], "summary": "Rodzajniki der/die/das, odmiana czasownika sein/haben, szyk zdania." },
+    { "id": "nie.komunikacja", "subject": "niemiecki", "name": "Komunikacja", "tier": 2, "difficulty": 3, "examWeight": 3, "prereq": ["nie.gramatyka"], "summary": "Przedstawianie się, pytania, proste dialogi dnia codziennego." },
+
+    { "id": "inf.komputer", "subject": "informatyka", "name": "Komputer i dane", "tier": 0, "difficulty": 1, "examWeight": 3, "prereq": [], "summary": "Budowa komputera, pliki i foldery, jednostki informacji (bit, bajt)." },
+    { "id": "inf.algorytmy", "subject": "informatyka", "name": "Algorytmy", "tier": 1, "difficulty": 3, "examWeight": 4, "prereq": ["inf.komputer"], "summary": "Sekwencja, warunki, pętle; zapis algorytmu i schemat blokowy." },
+    { "id": "inf.programowanie", "subject": "informatyka", "name": "Programowanie", "tier": 2, "difficulty": 4, "examWeight": 4, "prereq": ["inf.algorytmy"], "summary": "Scratch/Python: zmienne, instrukcje, funkcje, debugowanie." },
+    { "id": "inf.bezpieczenstwo", "subject": "informatyka", "name": "Bezpieczeństwo cyfrowe", "tier": 1, "difficulty": 2, "examWeight": 3, "prereq": ["inf.komputer"], "summary": "Hasła, prywatność, prawo autorskie, netykieta, krytyczna ocena źródeł." },
+
+    { "id": "prz.obserwacja", "subject": "przyroda", "name": "Obserwacja i pomiar", "tier": 0, "difficulty": 1, "examWeight": 3, "prereq": [], "summary": "Zmysły, przyrządy, jednostki, prowadzenie obserwacji przyrodniczych." },
+    { "id": "prz.mapa", "subject": "przyroda", "name": "Orientacja i mapa", "tier": 1, "difficulty": 2, "examWeight": 3, "prereq": ["prz.obserwacja"], "summary": "Kierunki świata, plan i mapa, skala, legenda." },
+    { "id": "prz.organizmy", "subject": "przyroda", "name": "Organizmy i środowisko", "tier": 1, "difficulty": 2, "examWeight": 3, "prereq": ["prz.obserwacja"], "summary": "Rośliny, zwierzęta, warunki życia, las/łąka/woda." },
+
+    { "id": "bio.komorka", "subject": "biologia", "name": "Komórka", "tier": 0, "difficulty": 2, "examWeight": 4, "prereq": [], "summary": "Budowa komórki roślinnej i zwierzęcej, organella, mikroskop." },
+    { "id": "bio.organizmy", "subject": "biologia", "name": "Klasyfikacja organizmów", "tier": 1, "difficulty": 3, "examWeight": 3, "prereq": ["bio.komorka"], "summary": "Królestwa, bakterie, protisty, grzyby, rośliny i zwierzęta." },
+    { "id": "bio.czlowiek", "subject": "biologia", "name": "Organizm człowieka", "tier": 2, "difficulty": 3, "examWeight": 5, "prereq": ["bio.organizmy"], "summary": "Układy: pokarmowy, oddechowy, krwionośny, nerwowy; zdrowie." },
+    { "id": "bio.ekologia", "subject": "biologia", "name": "Ekologia", "tier": 2, "difficulty": 3, "examWeight": 3, "prereq": ["bio.organizmy"], "summary": "Łańcuchy pokarmowe, ekosystem, ochrona przyrody." },
+    { "id": "bio.genetyka", "subject": "biologia", "name": "Genetyka", "tier": 3, "difficulty": 4, "examWeight": 3, "prereq": ["bio.komorka", "bio.czlowiek"], "summary": "DNA, geny, dziedziczenie, grupy krwi — podstawy." },
+
+    { "id": "geo.mapa", "subject": "geografia", "name": "Mapa i orientacja", "tier": 0, "difficulty": 2, "examWeight": 4, "prereq": [], "summary": "Skala, współrzędne geograficzne, rodzaje map, GPS." },
+    { "id": "geo.krajobrazy", "subject": "geografia", "name": "Krajobrazy Polski", "tier": 1, "difficulty": 2, "examWeight": 3, "prereq": ["geo.mapa"], "summary": "Pasy rzeźby, góry, niziny, wybrzeże, krajobraz przekształcony." },
+    { "id": "geo.polska", "subject": "geografia", "name": "Geografia Polski", "tier": 2, "difficulty": 3, "examWeight": 4, "prereq": ["geo.krajobrazy"], "summary": "Ludność, miasta, przemysł, rolnictwo, podział administracyjny." },
+    { "id": "geo.swiat", "subject": "geografia", "name": "Kontynenty i świat", "tier": 2, "difficulty": 3, "examWeight": 3, "prereq": ["geo.mapa"], "summary": "Strefy klimatyczne, kontynenty, ludność i gospodarka świata." },
+
+    { "id": "che.materia", "subject": "chemia", "name": "Budowa materii", "tier": 0, "difficulty": 3, "examWeight": 4, "prereq": [], "summary": "Atom, cząsteczka, pierwiastek, mieszaniny, stany skupienia." },
+    { "id": "che.uklad", "subject": "chemia", "name": "Układ okresowy", "tier": 1, "difficulty": 3, "examWeight": 4, "prereq": ["che.materia"], "summary": "Symbole, grupy i okresy, wartościowość, masa atomowa." },
+    { "id": "che.reakcje", "subject": "chemia", "name": "Reakcje chemiczne", "tier": 2, "difficulty": 4, "examWeight": 4, "prereq": ["che.uklad"], "summary": "Równania reakcji, prawo zachowania masy, typy reakcji." },
+    { "id": "che.kwasy", "subject": "chemia", "name": "Kwasy, zasady, sole", "tier": 3, "difficulty": 4, "examWeight": 4, "prereq": ["che.reakcje"], "summary": "pH, wskaźniki, zobojętnianie, najważniejsze kwasy i sole." },
+
+    { "id": "fiz.ruch", "subject": "fizyka", "name": "Ruch i siły", "tier": 0, "difficulty": 3, "examWeight": 4, "prereq": [], "summary": "Prędkość, droga, czas; siła, tarcie, zasady dynamiki." },
+    { "id": "fiz.energia", "subject": "fizyka", "name": "Energia i praca", "tier": 1, "difficulty": 3, "examWeight": 4, "prereq": ["fiz.ruch"], "summary": "Praca, moc, energia kinetyczna i potencjalna, ciepło." },
+    { "id": "fiz.elektrycznosc", "subject": "fizyka", "name": "Elektryczność", "tier": 2, "difficulty": 4, "examWeight": 4, "prereq": ["fiz.energia"], "summary": "Napięcie, natężenie, opór, obwody, prawo Ohma." },
+    { "id": "fiz.optyka", "subject": "fizyka", "name": "Optyka i fale", "tier": 2, "difficulty": 3, "examWeight": 3, "prereq": ["fiz.ruch"], "summary": "Odbicie, załamanie, soczewki, dźwięk i fale." },
+
+    { "id": "his.chronologia", "subject": "historia", "name": "Czas i źródła", "tier": 0, "difficulty": 2, "examWeight": 4, "prereq": [], "summary": "Chronologia, era, wiek, rodzaje źródeł historycznych." },
+    { "id": "his.starozytnosc", "subject": "historia", "name": "Starożytność", "tier": 1, "difficulty": 2, "examWeight": 3, "prereq": ["his.chronologia"], "summary": "Egipt, Grecja, Rzym — kultura i dziedzictwo antyku." },
+    { "id": "his.sredniowiecze", "subject": "historia", "name": "Średniowiecze", "tier": 2, "difficulty": 3, "examWeight": 3, "prereq": ["his.starozytnosc"], "summary": "Początki Polski, chrzest, Piastowie, społeczeństwo stanowe." },
+    { "id": "his.nowozytnosc", "subject": "historia", "name": "Nowożytność", "tier": 3, "difficulty": 3, "examWeight": 3, "prereq": ["his.sredniowiecze"], "summary": "Odrodzenie, Rzeczpospolita, rozbiory, rewolucje." },
+    { "id": "his.xxwiek", "subject": "historia", "name": "XIX–XX wiek", "tier": 4, "difficulty": 4, "examWeight": 4, "prereq": ["his.nowozytnosc"], "summary": "Niepodległość, wojny światowe, PRL, wolna Polska." },
+
+    { "id": "wos.spoleczenstwo", "subject": "wos", "name": "Człowiek i społeczeństwo", "tier": 0, "difficulty": 2, "examWeight": 3, "prereq": [], "summary": "Grupy społeczne, rodzina, naród, role i normy." },
+    { "id": "wos.prawa", "subject": "wos", "name": "Prawa człowieka", "tier": 1, "difficulty": 3, "examWeight": 3, "prereq": ["wos.spoleczenstwo"], "summary": "Prawa i wolności, prawa dziecka, organizacje praw człowieka." },
+    { "id": "wos.ustroj", "subject": "wos", "name": "Ustrój RP", "tier": 2, "difficulty": 3, "examWeight": 4, "prereq": ["wos.prawa"], "summary": "Trójpodział władzy, Sejm i Senat, prezydent, samorząd, wybory." },
+
+    { "id": "pla.srodki", "subject": "plastyka", "name": "Środki plastyczne", "tier": 0, "difficulty": 1, "examWeight": 3, "prereq": [], "summary": "Linia, plama, barwa, faktura, kompozycja, perspektywa." },
+    { "id": "pla.sztuka", "subject": "plastyka", "name": "Dziedzictwo sztuki", "tier": 1, "difficulty": 2, "examWeight": 3, "prereq": ["pla.srodki"], "summary": "Epoki, style, dzieła i twórcy, zabytki i muzea." },
+
+    { "id": "muz.notacja", "subject": "muzyka", "name": "Notacja i rytm", "tier": 0, "difficulty": 2, "examWeight": 3, "prereq": [], "summary": "Pięciolinia, nuty, wartości rytmiczne, metrum, tempo." },
+    { "id": "muz.historia", "subject": "muzyka", "name": "Gatunki i historia", "tier": 1, "difficulty": 2, "examWeight": 3, "prereq": ["muz.notacja"], "summary": "Epoki muzyczne, instrumenty, kompozytorzy, polska muzyka." },
+
+    { "id": "tec.materialy", "subject": "technika", "name": "Materiały i narzędzia", "tier": 0, "difficulty": 1, "examWeight": 3, "prereq": [], "summary": "Właściwości materiałów, narzędzia, bezpieczna praca." },
+    { "id": "tec.rysunek", "subject": "technika", "name": "Rysunek techniczny", "tier": 1, "difficulty": 2, "examWeight": 3, "prereq": ["tec.materialy"], "summary": "Pismo techniczne, wymiarowanie, rzuty, schematy." },
+    { "id": "tec.rower", "subject": "technika", "name": "Karta rowerowa", "tier": 1, "difficulty": 2, "examWeight": 3, "prereq": ["tec.materialy"], "summary": "Przepisy ruchu drogowego, znaki, bezpieczna jazda rowerem." },
+
+    { "id": "wf.sprawnosc", "subject": "wf", "name": "Sprawność i zdrowie", "tier": 0, "difficulty": 1, "examWeight": 3, "prereq": [], "summary": "Rozgrzewka, próby sprawności, higiena, zdrowy styl życia." },
+    { "id": "wf.sport", "subject": "wf", "name": "Sport i zasady gry", "tier": 1, "difficulty": 2, "examWeight": 3, "prereq": ["wf.sprawnosc"], "summary": "Gry zespołowe, lekkoatletyka, zasady fair play i bezpieczeństwo." },
+
+    { "id": "edb.pierwszapomoc", "subject": "edb", "name": "Pierwsza pomoc", "tier": 0, "difficulty": 3, "examWeight": 4, "prereq": [], "summary": "Wzywanie pomocy, pozycja boczna, RKO, opatrunki." },
+    { "id": "edb.zagrozenia", "subject": "edb", "name": "Zagrożenia i alarmy", "tier": 1, "difficulty": 2, "examWeight": 3, "prereq": ["edb.pierwszapomoc"], "summary": "Sygnały alarmowe, ewakuacja, zagrożenia naturalne i cywilizacyjne." }
   ]
 }

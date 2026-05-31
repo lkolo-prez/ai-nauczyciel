@@ -12,7 +12,7 @@ ze statusem implementacji. Legenda: ✅ działa · 🟡 częściowo · 🔮 plan
 | # | Warstwa | Status | Gdzie w projekcie / plan |
 |---|---------|--------|--------------------------|
 | 1 | **Cyfrowy bliźniak ucznia** | ✅ | `src/lib/cognitive.ts` — mastery, typy błędów, ryzyko, tempo |
-| 2 | **Mapa wiedzy (graf)** | ✅ | `data/knowledge-graph.json` + `pages/KnowledgeMap.tsx` |
+| 2 | **Mapa wiedzy (graf)** | ✅ | `data/knowledge-graph.json` (79 węzłów, cała podstawa IV–VIII) + `pages/KnowledgeMap.tsx`, `pages/Subjects.tsx` |
 | 3 | **AI Tutor (tekst/głos/zdjęcie/ekran)** | 🟡 | tekst + **głos** (Web Speech API): `src/lib/ai.ts`, `src/lib/speech.ts`; zdjęcia/ekran — plan |
 | 4 | **Analiza odręcznych rozwiązań (OCR)** | 🔮 | model multimodalny: odczyt pisma → wykrycie błędnego kroku |
 | 5 | **Tryb TikTok (feed)** | ✅ | `data/micro-lessons.json` + `pages/Feed.tsx` |

@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { subjects, questions as allQuestions, nodesBySubject, nodeById } from '../data';
+import { examSubjects as subjects, questions as allQuestions, nodesBySubject, nodeById } from '../data';
 import type { Question } from '../lib/types';
 
 // Layers 9 & 24 — exam/worksheet generator. A teacher (or a student) assembles a

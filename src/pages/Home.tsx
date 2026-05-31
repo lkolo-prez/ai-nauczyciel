@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useStore, CLASSES } from '../lib/store';
-import { subjects } from '../data';
+import { examSubjects as subjects } from '../data';
 import {
   estimatedScore,
   rootGaps,
@@ -205,6 +205,7 @@ export default function Home() {
 
       <section className="grid grid-cols-2 gap-3">
         <Tile to="/feed" icon="⚡" title={t('tiles.feed')} sub={t('tiles.feedSub')} />
+        <Tile to="/przedmioty" icon="📂" title={t('tiles.subjects')} sub={t('tiles.subjectsSub')} />
         <Tile to="/symulator" icon="📈" title={t('tiles.simulator')} sub={t('tiles.simulatorSub')} />
         <Tile to="/mapa" icon="🗺️" title={t('tiles.map')} sub={t('tiles.mapSub')} />
         <Tile to="/tutor" icon="🤖" title={t('tiles.ai')} sub={t('tiles.aiSub')} />
