@@ -159,6 +159,184 @@
       "answerIndex": 0,
       "misconceptions": ["", "pamiec", "pamiec", "pamiec"],
       "explanation": "'saucepan' (rondel) należy do tematu kuchnia/dom, nie szkoła. Pozostałe to słownictwo szkolne."
+    },
+    {
+      "id": "q.mat.ulamki.1",
+      "subject": "matematyka",
+      "nodeId": "mat.ulamki",
+      "type": "single",
+      "difficulty": 2,
+      "stem": "Ile wynosi 2/5 + 1/2?",
+      "options": ["9/10", "3/7", "3/10", "1"],
+      "answerIndex": 0,
+      "misconceptions": ["", "koncept", "rachunek", "rachunek"],
+      "explanation": "Wspólny mianownik to 10: 2/5 = 4/10, 1/2 = 5/10, suma = 9/10. Odpowiedź 3/7 to błędne dodanie licznik+licznik i mianownik+mianownik."
+    },
+    {
+      "id": "q.mat.potegi.1",
+      "subject": "matematyka",
+      "nodeId": "mat.potegi",
+      "type": "single",
+      "difficulty": 3,
+      "stem": "Oblicz: 2³ · 2² .",
+      "options": ["2⁵ = 32", "2⁶ = 64", "4⁵", "2⁵ = 10"],
+      "answerIndex": 0,
+      "misconceptions": ["", "koncept", "koncept", "rachunek"],
+      "explanation": "Przy mnożeniu potęg o tej samej podstawie dodajemy wykładniki: 2³·2² = 2⁵ = 32. Mnożenie wykładników (2⁶) to częsty błąd."
+    },
+    {
+      "id": "q.mat.wyrazenia.1",
+      "subject": "matematyka",
+      "nodeId": "mat.wyrazenia",
+      "type": "single",
+      "difficulty": 2,
+      "stem": "Uprość wyrażenie: 3x + 2x − x.",
+      "options": ["4x", "5x", "6x", "4"],
+      "answerIndex": 0,
+      "misconceptions": ["", "rachunek", "rachunek", "koncept"],
+      "explanation": "Redukujemy wyrazy podobne: 3x + 2x − x = (3+2−1)x = 4x. Odpowiedź 4 pomija zmienną x."
+    },
+    {
+      "id": "q.mat.proporcje.1",
+      "subject": "matematyka",
+      "nodeId": "mat.proporcje",
+      "type": "single",
+      "difficulty": 3,
+      "stem": "Samochód jedzie 90 km w 1,5 godziny. Jaka jest jego średnia prędkość?",
+      "options": ["60 km/h", "135 km/h", "45 km/h", "90 km/h"],
+      "answerIndex": 0,
+      "misconceptions": ["", "koncept", "rachunek", "polecenie"],
+      "explanation": "v = droga : czas = 90 : 1,5 = 60 km/h. Odpowiedź 135 to mnożenie zamiast dzielenia."
+    },
+    {
+      "id": "q.mat.uklad.1",
+      "subject": "matematyka",
+      "nodeId": "mat.uklad",
+      "type": "single",
+      "difficulty": 2,
+      "stem": "W którym punkcie obie współrzędne są dodatnie (I ćwiartka)?",
+      "options": ["(3, 5)", "(−3, 5)", "(3, −5)", "(−3, −5)"],
+      "answerIndex": 0,
+      "misconceptions": ["", "koncept", "koncept", "koncept"],
+      "explanation": "I ćwiartka to x > 0 i y > 0, czyli (3, 5). Znaki współrzędnych decydują o ćwiartce."
+    },
+    {
+      "id": "q.mat.bryly.1",
+      "subject": "matematyka",
+      "nodeId": "mat.bryly",
+      "type": "single",
+      "difficulty": 3,
+      "stem": "Sześcian ma krawędź 4 cm. Jaka jest jego objętość?",
+      "options": ["64 cm³", "16 cm³", "48 cm³", "12 cm³"],
+      "answerIndex": 0,
+      "misconceptions": ["", "koncept", "koncept", "rachunek"],
+      "explanation": "Objętość sześcianu = a³ = 4³ = 64 cm³. Odpowiedź 16 to a² (pole ściany), a 48 to pole powierzchni."
+    },
+    {
+      "id": "q.mat.katy.1",
+      "subject": "matematyka",
+      "nodeId": "mat.katy",
+      "type": "single",
+      "difficulty": 2,
+      "stem": "Dwa kąty trójkąta mają 50° i 60°. Ile ma trzeci kąt?",
+      "options": ["70°", "110°", "80°", "90°"],
+      "answerIndex": 0,
+      "misconceptions": ["", "koncept", "rachunek", "koncept"],
+      "explanation": "Suma kątów w trójkącie to 180°. 180 − 50 − 60 = 70°."
+    },
+    {
+      "id": "q.mat.prawd.1",
+      "subject": "matematyka",
+      "nodeId": "mat.prawdopodobienstwo",
+      "type": "single",
+      "difficulty": 3,
+      "stem": "Rzucamy kostką sześcienną. Jakie jest prawdopodobieństwo wyrzucenia liczby parzystej?",
+      "options": ["1/2", "1/3", "1/6", "2/3"],
+      "answerIndex": 0,
+      "misconceptions": ["", "rachunek", "koncept", "koncept"],
+      "explanation": "Parzyste: 2, 4, 6 — to 3 z 6 możliwości, czyli 3/6 = 1/2."
+    },
+    {
+      "id": "q.pol.lektury.1",
+      "subject": "polski",
+      "nodeId": "pol.lektury",
+      "type": "single",
+      "difficulty": 3,
+      "stem": "Komedia Aleksandra Fredry, w której dwaj sąsiedzi spierają się o naprawę muru granicznego, to:",
+      "options": ["Zemsta", "Quo vadis", "Balladyna", "Pan Tadeusz"],
+      "answerIndex": 0,
+      "misconceptions": ["", "pamiec", "pamiec", "pamiec"],
+      "explanation": "To Zemsta Aleksandra Fredry — spór Cześnika i Rejenta o mur graniczny. Do każdej lektury zapamiętaj: problem, scenę-symbol i cytat (patrz mikrolekcja o lekturach)."
+    },
+    {
+      "id": "q.pol.skladnia.1",
+      "subject": "polski",
+      "nodeId": "pol.skladnia",
+      "type": "single",
+      "difficulty": 2,
+      "stem": "Którą częścią mowy jest wyraz 'szybko' w zdaniu 'Biegł bardzo szybko'?",
+      "options": ["przysłówek", "przymiotnik", "czasownik", "rzeczownik"],
+      "answerIndex": 0,
+      "misconceptions": ["", "koncept", "koncept", "koncept"],
+      "explanation": "'Szybko' określa czasownik (jak biegł?) — to przysłówek. Przymiotnik określałby rzeczownik (np. 'szybki bieg')."
+    },
+    {
+      "id": "q.pol.ortografia.1",
+      "subject": "polski",
+      "nodeId": "pol.ortografia",
+      "type": "single",
+      "difficulty": 2,
+      "stem": "Które zdanie jest zapisane poprawnie?",
+      "options": [
+        "Wiem, że jutro będzie padać.",
+        "Wiem że jutro będzie padać.",
+        "Wiem, rze jutro będzie padać.",
+        "Wiem rze jutro bedzie padać."
+      ],
+      "answerIndex": 0,
+      "misconceptions": ["", "jezyk", "jezyk", "jezyk"],
+      "explanation": "Przed spójnikiem 'że' stawiamy przecinek, a 'że' piszemy przez ż."
+    },
+    {
+      "id": "q.ang.sluchanie.1",
+      "subject": "angielski",
+      "nodeId": "ang.sluchanie",
+      "type": "single",
+      "difficulty": 2,
+      "stem": "You hear: 'The train leaves at a quarter to seven.' What time is it?",
+      "options": ["6:45", "7:15", "7:45", "6:15"],
+      "answerIndex": 0,
+      "misconceptions": ["", "koncept", "koncept", "koncept"],
+      "explanation": "'a quarter to seven' = 15 minut do 7:00, czyli 6:45. 'quarter past' oznaczałoby 7:15."
+    },
+    {
+      "id": "q.ang.czytanie.1",
+      "subject": "angielski",
+      "nodeId": "ang.czytanie",
+      "type": "truefalse",
+      "difficulty": 2,
+      "stem": "Text: 'Tom has never been to Spain, but he would love to visit it one day.' — Tom has already visited Spain.",
+      "options": ["True", "False"],
+      "answerIndex": 1,
+      "misconceptions": ["polecenie", ""],
+      "explanation": "'has never been' = nigdy nie był. Zdanie mówi, że chciałby odwiedzić — czyli jeszcze nie był. Odpowiedź: False."
+    },
+    {
+      "id": "q.ang.pisanie.1",
+      "subject": "angielski",
+      "nodeId": "ang.pisanie",
+      "type": "single",
+      "difficulty": 3,
+      "stem": "W e-mailu polecenie ma 3 podpunkty. Co zrobić, by zdobyć maksimum punktów za treść?",
+      "options": [
+        "Rozwinąć każdy z 3 podpunktów osobnym zdaniem",
+        "Napisać dużo o jednym, najciekawszym podpunkcie",
+        "Skupić się na idealnej gramatyce, pomijając jeden podpunkt",
+        "Napisać krótko, ogólnie, bez szczegółów"
+      ],
+      "answerIndex": 0,
+      "misconceptions": ["", "polecenie", "polecenie", "polecenie"],
+      "explanation": "Każdy z 3 podpunktów trzeba zrealizować i rozwinąć — pominięcie jednego obniża punkty za treść nawet przy świetnej gramatyce."
     }
   ]
 }

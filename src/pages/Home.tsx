@@ -10,8 +10,12 @@ import {
   streak,
   errorProfile,
 } from '../lib/cognitive';
+import { dueNodeIds } from '../lib/srs';
+import { leagueOf } from '../lib/engagement';
 import Radar from '../components/charts/Radar';
 import Ring from '../components/Ring';
+import QuestsPanel from '../components/QuestsPanel';
+import GoalCard from '../components/GoalCard';
 
 function Onboarding() {
   const setProfile = useStore((s) => s.setProfile);
@@ -29,7 +33,7 @@ function Onboarding() {
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="Twoje imię"
-          className="mb-4 w-full rounded-xl bg-white/5 px-3 py-2.5 outline-none ring-brand/0 focus:ring-2 focus:ring-brand"
+          className="mb-4 w-full rounded-xl bg-white/5 px-3 py-2.5 outline-none focus:ring-2 focus:ring-brand"
         />
         <div className="mb-2 text-xs font-semibold text-white/60">Wybierz klasę postaci</div>
         <div className="mb-5 grid grid-cols-2 gap-2">
@@ -47,10 +51,7 @@ function Onboarding() {
             </button>
           ))}
         </div>
-        <button
-          className="btn-brand w-full"
-          onClick={() => setProfile(name.trim() || 'Uczeń', cls)}
-        >
+        <button className="btn-brand w-full" onClick={() => setProfile(name.trim() || 'Uczeń', cls)}>
           Zaczynamy 🚀
         </button>
       </div>
@@ -64,40 +65,44 @@ export default function Home() {
   const str = streak(s);
   const burn = burnoutRisk(s);
   const ep = errorProfile(s);
+  const league = leagueOf(s.leagueTier);
+  const due = dueNodeIds(s.srs).length;
+  const boostActive = s.inventory.xpBoostUntil > Date.now();
 
-  const radarAxes = subjects.map((sub) => ({
-    label: sub.shortName,
-    value: estimatedScore(s, sub.id) / 100,
-  }));
-
+  const radarAxes = subjects.map((sub) => ({ label: sub.shortName, value: estimatedScore(s, sub.id) / 100 }));
   const gaps = rootGaps(s, undefined, 3);
 
   return (
     <div className="p-4 pb-6">
       {!s.name && <Onboarding />}
 
-      {/* Top bar */}
       <header className="mb-4 flex items-center justify-between">
         <div>
           <div className="text-xs text-white/50">Egzamin ósmoklasisty</div>
           <h1 className="text-xl font-extrabold">Cześć, {s.name || 'Uczniu'} 👋</h1>
         </div>
-        <Link to="/profil" className="flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5">
-          <span className="text-lg">{CLASSES.find((c) => c.id === s.classId)?.emoji ?? '🎓'}</span>
-          <div className="text-right leading-tight">
-            <div className="text-[10px] text-white/50">Poziom {lvl.level}</div>
-            <div className="text-xs font-semibold">🔥 {str} dni</div>
-          </div>
-        </Link>
+        <div className="flex items-center gap-2">
+          <span className="chip bg-accent/15 text-accent">💎 {s.coins}</span>
+          <Link to="/profil" className="flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5">
+            <span className="text-lg">{CLASSES.find((c) => c.id === s.classId)?.emoji ?? '🎓'}</span>
+            <div className="text-right leading-tight">
+              <div className="text-[10px] text-white/50">Poz. {lvl.level} {league.emoji}</div>
+              <div className="text-xs font-semibold">🔥 {str}</div>
+            </div>
+          </Link>
+        </div>
       </header>
 
-      {/* Burnout banner */}
+      {boostActive && (
+        <div className="mb-3 rounded-xl border border-warn/40 bg-warn/10 p-2 text-center text-xs font-semibold text-warn">
+          ⚡ Boost 2× XP aktywny! Wykorzystaj go w ćwiczeniach.
+        </div>
+      )}
+
       {burn.risk !== 'ok' && (
         <div
           className={`mb-4 rounded-xl border p-3 text-sm ${
-            burn.risk === 'wysokie'
-              ? 'border-bad/40 bg-bad/10 text-bad'
-              : 'border-warn/40 bg-warn/10 text-warn'
+            burn.risk === 'wysokie' ? 'border-bad/40 bg-bad/10 text-bad' : 'border-warn/40 bg-warn/10 text-warn'
           }`}
         >
           <div className="font-semibold">
@@ -107,7 +112,39 @@ export default function Home() {
         </div>
       )}
 
-      {/* Digital twin */}
+      <GoalCard />
+
+      {/* Due reviews — the daily hook */}
+      {due > 0 && (
+        <Link
+          to="/cwicz"
+          className="card mb-4 flex items-center gap-3 border-accent/30 bg-accent/10 p-4 transition hover:bg-accent/15"
+        >
+          <span className="text-3xl">🔁</span>
+          <div className="flex-1">
+            <div className="font-bold text-accent">{due} {due === 1 ? 'temat' : 'tematy'} do powtórki dziś</div>
+            <div className="text-xs text-white/60">Utrwal, zanim zapomnisz — to klucz do trwałej wiedzy.</div>
+          </div>
+          <span className="btn-brand text-sm">Powtórz ›</span>
+        </Link>
+      )}
+
+      <QuestsPanel />
+
+      {/* Exam boss mode */}
+      <Link
+        to="/egzamin"
+        className="card mb-4 flex items-center gap-3 overflow-hidden p-4 transition hover:bg-card"
+        style={{ background: 'linear-gradient(110deg, rgba(124,92,255,0.18), rgba(251,113,133,0.12))' }}
+      >
+        <span className="animate-floaty text-3xl">⚔️</span>
+        <div className="flex-1">
+          <div className="font-bold">Egzamin próbny — Boss</div>
+          <div className="text-xs text-white/60">Test na czas. Pokonaj bossa, zgarnij wielką nagrodę.</div>
+        </div>
+        <span className="text-white/40">›</span>
+      </Link>
+
       <section className="card mb-4 p-4">
         <div className="mb-1 flex items-center justify-between">
           <h2 className="font-bold">🧬 Twój cyfrowy bliźniak</h2>
@@ -133,7 +170,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Plan na dziś = root gaps */}
       <section className="card mb-4 p-4">
         <h2 className="mb-2 font-bold">🎯 Plan na dziś</h2>
         <p className="mb-3 text-xs text-white/55">
@@ -166,7 +202,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Quick actions */}
       <section className="grid grid-cols-2 gap-3">
         <Link to="/feed" className="card flex flex-col gap-1 p-4 transition hover:bg-card">
           <span className="text-2xl">⚡</span>

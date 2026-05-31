@@ -7,6 +7,8 @@ import KnowledgeMap from './pages/KnowledgeMap';
 import Tutor from './pages/Tutor';
 import Simulator from './pages/Simulator';
 import Profile from './pages/Profile';
+import Exam from './pages/Exam';
+import Parent from './pages/Parent';
 
 export default function App() {
   return (
@@ -20,6 +22,8 @@ export default function App() {
           <Route path="/mapa" element={<KnowledgeMap />} />
           <Route path="/tutor" element={<Tutor />} />
           <Route path="/symulator" element={<Simulator />} />
+          <Route path="/egzamin" element={<Exam />} />
+          <Route path="/rodzic" element={<Parent />} />
           <Route path="/profil" element={<Profile />} />
         </Routes>
       </main>

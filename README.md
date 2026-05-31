@@ -2,9 +2,9 @@
 
 # 🎓 AI Nauczyciel
 
-### Otwarty, inteligentny system przygotowania do **egzaminu ósmoklasisty** — i nie tylko.
+### Otwarty **system operacyjny edukacji (EduOS)** — startuje od **egzaminu ósmoklasisty**, prowadzi ucznia dalej.
 
-Nie kolejna baza testów. To **cyfrowy bliźniak ucznia**: nauczyciel + psycholog + trener nauki + AI + RPG, w jednej aplikacji mobilnej.
+Nie kolejna baza testów. To **cyfrowy bliźniak ucznia**: nauczyciel + psycholog + trener nauki + AI + RPG, w jednej aplikacji mobilnej. Pełna wizja 25 warstw: [`docs/VISION.md`](docs/VISION.md).
 
 [![Deploy](https://github.com/lkolo-prez/ai-nauczyciel/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/lkolo-prez/ai-nauczyciel/actions/workflows/deploy-pages.yml)
 [![CI](https://github.com/lkolo-prez/ai-nauczyciel/actions/workflows/ci.yml/badge.svg)](https://github.com/lkolo-prez/ai-nauczyciel/actions/workflows/ci.yml)
@@ -32,8 +32,13 @@ edukacyjne wcześniej niż nauczyciel. To właśnie robi ten projekt.
 | ⚡ **Nauka jak TikTok** | Feed mikrolekcji 15–60 s zamiast 40-minutowych kursów |
 | 📈 **Symulator wyniku** | „Ucz się 20 min/dzień → matematyka 48% → 72%" na podstawie Twojego realnego profilu |
 | 🤖 **Nauczyciel AI 24/7** | Tłumaczy, znajduje luki, generuje zadania i analizuje błędy — offline, na otwartej bazie wiedzy |
-| 🎮 **RPG edukacyjne** | Poziomy, XP, klasy postaci, osiągnięcia, ranking szkoły i miasta |
+| 🎮 **RPG edukacyjne** | Poziomy, XP, klasy postaci, osiągnięcia, ligi tygodniowe |
 | 🔥 **Wykrywanie wypalenia** | Widzi spadek aktywności i skuteczności → zmienia plan nauki |
+| 🔁 **Spaced repetition (SM-2)** | Przypomina materiał dokładnie wtedy, gdy zaczynasz zapominać — zdrowy nawyk nauki |
+| 🧭 **Adaptacja + odkrywanie** | Sesja miesza powtórki, słabe punkty i *nowe tematy*; trudność dopasowana do poziomu |
+| 📜 **Questy, combo, skrzynie** | Dzienne wyzwania, mnożnik za serię, waluta i skrzynie z losową nagrodą |
+| ⚔️ **Egzamin-boss** | Test na czas z dużą nagrodą — emocje prawdziwego egzaminu |
+| 👪 **Tryb rodzica** | Czytelny raport postępów bez konieczności rozumienia przedmiotu |
 
 ## 📚 Przedmioty (MVP — Etap 1)
 
@@ -47,14 +52,20 @@ data/            ← OTWARTA BAZA WIEDZY (CC BY-SA): graf wiedzy, mikrolekcje, z
  └─ schema/      ← schematy + dokumentacja
 src/
  ├─ lib/
- │   ├─ cognitive.ts ← model poznawczy: mastery, typy błędów, prognoza, wypalenie, RPG
- │   ├─ store.ts     ← stan ucznia (Zustand + localStorage)
- │   └─ ai.ts        ← „mózg" nauczyciela AI (offline; gotowy na podpięcie LLM)
- ├─ components/  ← wykresy SVG (radar, linia, pierścień), widok grafu wiedzy
- └─ pages/       ← Dom, Feed, Ćwicz, Mapa, AI, Symulator, Profil
+ │   ├─ cognitive.ts  ← model poznawczy: mastery, typy błędów, prognoza, wypalenie, RPG
+ │   ├─ srs.ts        ← spaced repetition (SM-2) — harmonogram powtórek
+ │   ├─ adaptive.ts   ← dobór sesji: powtórki + słabe punkty + odkrywanie
+ │   ├─ engagement.ts ← questy, combo, waluta, skrzynie, ligi
+ │   ├─ store.ts      ← stan ucznia (Zustand + localStorage, migracje)
+ │   └─ ai.ts         ← „mózg" nauczyciela AI (offline; gotowy na podpięcie LLM)
+ ├─ components/  ← wykresy SVG, graf wiedzy, panel questów, karta celu
+ └─ pages/       ← Dom, Feed, Ćwicz, Mapa, AI, Symulator, Egzamin, Rodzic, Profil
+data/            ← otwarta baza wiedzy + katalog arkuszy 2019–2025
 scripts/         ← walidacja bazy wiedzy (CI) + pipeline danych
 .github/         ← deploy Pages, CI, build APK Androida
 ```
+
+Pełna wizja **EduOS (25 warstw)** i status każdej: [`docs/VISION.md`](docs/VISION.md).
 
 Pełny opis: [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
 
