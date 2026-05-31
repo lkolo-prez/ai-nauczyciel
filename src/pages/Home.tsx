@@ -233,6 +233,21 @@ export default function Home() {
           <span className="font-semibold">Tryb rodzica</span>
           <span className="text-[11px] text-white/50">Raport postępów</span>
         </Link>
+        <Link to="/trendy" className="card flex flex-col gap-1 p-4 transition hover:bg-card">
+          <span className="text-2xl">📊</span>
+          <span className="font-semibold">Trendy</span>
+          <span className="text-[11px] text-white/50">Gdzie są punkty</span>
+        </Link>
+        <Link to="/nauczyciel" className="card flex flex-col gap-1 p-4 transition hover:bg-card">
+          <span className="text-2xl">🧑‍🏫</span>
+          <span className="font-semibold">Nauczyciel</span>
+          <span className="text-[11px] text-white/50">Raport klasy</span>
+        </Link>
+        <Link to="/kariera" className="card flex flex-col gap-1 p-4 transition hover:bg-card">
+          <span className="text-2xl">🧭</span>
+          <span className="font-semibold">Kariera</span>
+          <span className="text-[11px] text-white/50">Twoje ścieżki</span>
+        </Link>
       </section>
     </div>
   );

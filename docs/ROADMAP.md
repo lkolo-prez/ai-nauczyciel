@@ -24,6 +24,10 @@ rynku pracy** — budując po drodze jego cyfrowy model poznawczy. Pełna,
 - [x] **Tryb rodzica** — raport postępów (Warstwa 12)
 - [x] **Głosowy AI Tutor** — mowa→tekst i czytanie odpowiedzi (Web Speech API, Warstwa 3)
 - [x] **Generator sprawdzianów** — wybór tematów/trudności, klucz, druk PDF (Warstwy 9, 24)
+- [x] **Trendy egzaminacyjne** — wagi tematów i rozkład typów błędów (Warstwa 10)
+- [x] **Tryb nauczyciela** — raport klasy (demo) + skrót do generatora (Warstwa 13)
+- [x] **Doradca kariery** — dopasowanie ścieżek do mocnych stron (Warstwa 17)
+- [x] Ekspansja treści: 24 mikrolekcje, 38 zadań w stylu CKE
 - [x] **Katalog arkuszy 2019–2025** (główny/dodatkowy/próbne) — metadane + linki
 - [ ] Rozbudowa banku zadań do pełnego pokrycia wymagań CKE (cel: 500+ zadań)
 - [ ] Analiza częstotliwości typów zadań z arkuszy (Warstwa 10)

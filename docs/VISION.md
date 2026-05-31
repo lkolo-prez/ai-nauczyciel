@@ -20,14 +20,14 @@ ze statusem implementacji. Legenda: ✅ działa · 🟡 częściowo · 🔮 plan
 | 7 | **Gildie i rankingi** | 🟡 | ligi tygodniowe + ranking: `src/lib/engagement.ts`; gildie/klasy — plan |
 | 8 | **Symulator egzaminu** | ✅ | `pages/Simulator.tsx`, `projectScore()` |
 | 9 | **Generator egzaminów** | ✅ | `pages/Generator.tsx` — wybór tematów/trudności, klucz, druk PDF; + `pages/Exam.tsx` |
-| 10 | **Analiza wszystkich arkuszy** | 🟡 | katalog 2019–2025 + próbne: `data/exams.json`; analiza częstotliwości — plan |
+| 10 | **Analiza wszystkich arkuszy** | 🟡 | katalog 2019–2025: `data/exams.json`; analityka wag tematów i błędów: `pages/Trends.tsx` |
 | 11 | **AI psycholog nauki** | ✅ | `burnoutRisk()` w `cognitive.ts` |
 | 12 | **Rodzic AI** | ✅ | `pages/Parent.tsx` — raport bez żargonu |
-| 13 | **Nauczyciel AI (raport klasy)** | 🔮 | agregacja profili uczniów → słabe punkty klasy, propozycje lekcji |
+| 13 | **Nauczyciel AI (raport klasy)** | 🟡 | `pages/Teacher.tsx` — raport klasy (demo, kohorta symulowana) + skrót do generatora |
 | 14 | **Dyrektor AI** | 🔮 | statystyki szkoły/klas/nauczycieli, wskaźniki egzaminacyjne |
 | 15 | **Samorząd AI (JST)** | 🔮 | wyniki szkół w mieście, trendy, potrzeby edukacyjne |
 | 16 | **Marketplace** | 🔮 | korepetytorzy, mentorzy, psycholodzy, logopedzi |
-| 17 | **Kariera** | 🔮 | od 7 klasy: predyspozycje, zainteresowania, zawody |
+| 17 | **Kariera** | 🟡 | `pages/Career.tsx` — dopasowanie ścieżek i zawodów do mocnych stron |
 | 18 | **CV ucznia** | 🔮 | budowane automatycznie z osiągnięć i projektów |
 | 19 | **Portfolio** | 🔮 | projekty, prezentacje, filmy |
 | 20 | **AI rekrutacja do szkół** | 🔮 | szanse, progi punktowe, ranking szkół |

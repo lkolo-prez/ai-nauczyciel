@@ -10,6 +10,9 @@ import Profile from './pages/Profile';
 import Exam from './pages/Exam';
 import Parent from './pages/Parent';
 import Generator from './pages/Generator';
+import Trends from './pages/Trends';
+import Teacher from './pages/Teacher';
+import Career from './pages/Career';
 
 export default function App() {
   return (
@@ -26,6 +29,9 @@ export default function App() {
           <Route path="/egzamin" element={<Exam />} />
           <Route path="/rodzic" element={<Parent />} />
           <Route path="/generator" element={<Generator />} />
+          <Route path="/trendy" element={<Trends />} />
+          <Route path="/nauczyciel" element={<Teacher />} />
+          <Route path="/kariera" element={<Career />} />
           <Route path="/profil" element={<Profile />} />
         </Routes>
       </main>

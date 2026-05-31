@@ -337,6 +337,148 @@
       "answerIndex": 0,
       "misconceptions": ["", "polecenie", "polecenie", "polecenie"],
       "explanation": "Każdy z 3 podpunktów trzeba zrealizować i rozwinąć — pominięcie jednego obniża punkty za treść nawet przy świetnej gramatyce."
+    },
+    {
+      "id": "q.mat.dzialania.1",
+      "subject": "matematyka",
+      "nodeId": "mat.dzialania",
+      "type": "single",
+      "difficulty": 2,
+      "stem": "Oblicz: 2 + 3 · 4.",
+      "options": ["14", "20", "24", "9"],
+      "answerIndex": 0,
+      "misconceptions": ["", "koncept", "rachunek", "rachunek"],
+      "explanation": "Najpierw mnożenie, potem dodawanie: 3·4 = 12, 2 + 12 = 14. Wynik 20 to liczenie od lewej bez kolejności działań."
+    },
+    {
+      "id": "q.mat.dzialania.2",
+      "subject": "matematyka",
+      "nodeId": "mat.dzialania",
+      "type": "single",
+      "difficulty": 2,
+      "stem": "Ile wynosi -5 + 8?",
+      "options": ["3", "-3", "13", "-13"],
+      "answerIndex": 0,
+      "misconceptions": ["", "koncept", "rachunek", "koncept"],
+      "explanation": "Od 8 'odchodzimy' 5 w stronę zera: -5 + 8 = 3. Liczba o większej wartości (8) jest dodatnia, więc wynik dodatni."
+    },
+    {
+      "id": "q.mat.ulamki.2",
+      "subject": "matematyka",
+      "nodeId": "mat.ulamki",
+      "type": "single",
+      "difficulty": 2,
+      "stem": "Jaki to procent: 3/4?",
+      "options": ["75%", "34%", "43%", "0,75%"],
+      "answerIndex": 0,
+      "misconceptions": ["", "koncept", "koncept", "koncept"],
+      "explanation": "3/4 = 0,75 = 75%. Zamiana ułamka na procent: pomnóż przez 100."
+    },
+    {
+      "id": "q.mat.procenty.3",
+      "subject": "matematyka",
+      "nodeId": "mat.procenty",
+      "type": "single",
+      "difficulty": 4,
+      "stem": "Cenę 200 zł podniesiono o 10%, a potem obniżono o 10%. Jaka jest cena końcowa?",
+      "options": ["198 zł", "200 zł", "202 zł", "180 zł"],
+      "answerIndex": 0,
+      "misconceptions": ["", "koncept", "rachunek", "koncept"],
+      "explanation": "Po podwyżce: 220 zł. Obniżka 10% liczona OD 220 = 22 zł, więc 220 - 22 = 198 zł. Procenty liczymy od aktualnej wartości."
+    },
+    {
+      "id": "q.mat.rownania.2",
+      "subject": "matematyka",
+      "nodeId": "mat.rownania",
+      "type": "single",
+      "difficulty": 3,
+      "stem": "Rozwiąż: 2(x + 3) = 14.",
+      "options": ["x = 4", "x = 7", "x = 5", "x = 10"],
+      "answerIndex": 0,
+      "misconceptions": ["", "koncept", "rachunek", "koncept"],
+      "explanation": "Najpierw nawias: 2x + 6 = 14, więc 2x = 8, x = 4. Pominięcie mnożenia przez nawias daje błąd."
+    },
+    {
+      "id": "q.mat.zadania.1",
+      "subject": "matematyka",
+      "nodeId": "mat.zadania-tekstowe",
+      "type": "single",
+      "difficulty": 4,
+      "stem": "Ania ma 12 lat i jest 3 razy młodsza od mamy. Ile lat ma mama?",
+      "options": ["36", "15", "9", "4"],
+      "answerIndex": 0,
+      "misconceptions": ["", "koncept", "polecenie", "koncept"],
+      "explanation": "'3 razy młodsza' znaczy, że mama jest 3 razy starsza: 12 · 3 = 36. Kluczowe to dobrze odczytać kierunek zależności."
+    },
+    {
+      "id": "q.mat.figury.2",
+      "subject": "matematyka",
+      "nodeId": "mat.figury",
+      "type": "single",
+      "difficulty": 3,
+      "stem": "Trójkąt ma podstawę 8 cm i wysokość 5 cm. Jakie jest jego pole?",
+      "options": ["20 cm^2", "40 cm^2", "13 cm^2", "26 cm^2"],
+      "answerIndex": 0,
+      "misconceptions": ["", "koncept", "koncept", "rachunek"],
+      "explanation": "Pole trójkąta = (podstawa · wysokość) : 2 = (8 · 5) : 2 = 20 cm^2. Wynik 40 to pominięcie dzielenia przez 2."
+    },
+    {
+      "id": "q.pol.czytanie.2",
+      "subject": "polski",
+      "nodeId": "pol.czytanie",
+      "type": "single",
+      "difficulty": 3,
+      "stem": "Co oznacza związek frazeologiczny 'rzucać grochem o ścianę'?",
+      "options": [
+        "Mówić bez skutku, na próżno",
+        "Marnować jedzenie",
+        "Sprzątać dom",
+        "Głośno się kłócić"
+      ],
+      "answerIndex": 0,
+      "misconceptions": ["", "koncept", "koncept", "koncept"],
+      "explanation": "'Rzucać grochem o ścianę' = przekonywać kogoś bezskutecznie. Frazeologizmów nie tłumaczymy dosłownie."
+    },
+    {
+      "id": "q.pol.argumentacja.1",
+      "subject": "polski",
+      "nodeId": "pol.argumentacja",
+      "type": "single",
+      "difficulty": 3,
+      "stem": "Który element jest niezbędny w mocnym argumencie do rozprawki?",
+      "options": [
+        "Przykład popierający tezę",
+        "Pytanie retoryczne",
+        "Cytat z piosenki",
+        "Opis pogody"
+      ],
+      "answerIndex": 0,
+      "misconceptions": ["", "koncept", "koncept", "koncept"],
+      "explanation": "Argument musi zawierać przykład (z lektury lub życia) potwierdzający tezę. Bez przykładu to tylko gołosłowne twierdzenie."
+    },
+    {
+      "id": "q.ang.gram.2",
+      "subject": "angielski",
+      "nodeId": "ang.gramatyka",
+      "type": "single",
+      "difficulty": 3,
+      "stem": "Choose the correct option: 'She is taller ___ her brother.'",
+      "options": ["than", "then", "that", "as"],
+      "answerIndex": 0,
+      "misconceptions": ["", "jezyk", "jezyk", "jezyk"],
+      "explanation": "Przy stopniu wyższym przymiotnika używamy 'than' (taller than). 'then' znaczy 'potem' i jest częstym błędem."
+    },
+    {
+      "id": "q.ang.slow.2",
+      "subject": "angielski",
+      "nodeId": "ang.slownictwo",
+      "type": "single",
+      "difficulty": 2,
+      "stem": "Which word means 'lekarz'?",
+      "options": ["doctor", "teacher", "driver", "baker"],
+      "answerIndex": 0,
+      "misconceptions": ["", "pamiec", "pamiec", "pamiec"],
+      "explanation": "'doctor' = lekarz. teacher = nauczyciel, driver = kierowca, baker = piekarz."
     }
   ]
 }
