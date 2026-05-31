@@ -1,0 +1,40 @@
+{
+  "$schema": "./schema/subjects.schema.md",
+  "version": "2026-05-31",
+  "license": "CC-BY-SA-4.0",
+  "subjects": [
+    {
+      "id": "matematyka",
+      "name": "Matematyka",
+      "shortName": "MAT",
+      "color": "#7c5cff",
+      "icon": "∑",
+      "examMinutes": 100,
+      "maxPoints": 25,
+      "stage": "egzamin-osmoklasisty",
+      "description": "Logiczne myślenie, rachunki, geometria i odczytywanie informacji. Najczęstsze powody utraty punktów to czytanie polecenia i błędy rachunkowe, nie brak wiedzy."
+    },
+    {
+      "id": "polski",
+      "name": "Język polski",
+      "shortName": "POL",
+      "color": "#fb7185",
+      "icon": "✍",
+      "examMinutes": 120,
+      "maxPoints": 45,
+      "stage": "egzamin-osmoklasisty",
+      "description": "Czytanie ze zrozumieniem, znajomość lektur, argumentacja i wypracowanie (rozprawka lub opowiadanie). Wypracowanie to ok. połowa punktów."
+    },
+    {
+      "id": "angielski",
+      "name": "Język angielski",
+      "shortName": "ANG",
+      "color": "#22d3ee",
+      "icon": "🌐",
+      "examMinutes": 90,
+      "maxPoints": 55,
+      "stage": "egzamin-osmoklasisty",
+      "description": "Słuchanie, czytanie, znajomość funkcji językowych, środki językowe i krótka wypowiedź pisemna. Najczęściej wybierany język obcy na egzaminie."
+    }
+  ]
+}

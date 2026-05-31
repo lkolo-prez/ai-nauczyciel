@@ -1,0 +1,39 @@
+{
+  "$schema": "./schema/knowledge-graph.schema.md",
+  "version": "2026-05-31",
+  "license": "CC-BY-SA-4.0",
+  "description": "Graf wiedzy = mapa zależności umiejętności. Krawędź A -> B oznacza: aby dobrze opanować B, najpierw potrzebujesz A. System używa grafu do wykrywania 'korzeni' braków (np. słabe procenty psują geometrię i zadania tekstowe).",
+  "nodes": [
+    { "id": "mat.dzialania", "subject": "matematyka", "name": "Działania na liczbach", "tier": 0, "difficulty": 1, "examWeight": 5, "prereq": [], "summary": "Kolejność działań, liczby dodatnie i ujemne, działania pamięciowe i pisemne." },
+    { "id": "mat.ulamki", "subject": "matematyka", "name": "Ułamki", "tier": 1, "difficulty": 2, "examWeight": 5, "prereq": ["mat.dzialania"], "summary": "Ułamki zwykłe i dziesiętne, skracanie, wspólny mianownik, zamiana ułamek↔procent." },
+    { "id": "mat.procenty", "subject": "matematyka", "name": "Procenty", "tier": 2, "difficulty": 3, "examWeight": 5, "prereq": ["mat.ulamki"], "summary": "Procent liczby, liczba z procentu, podwyżki/obniżki, punkty procentowe, lokaty i VAT." },
+    { "id": "mat.potegi", "subject": "matematyka", "name": "Potęgi i pierwiastki", "tier": 2, "difficulty": 3, "examWeight": 3, "prereq": ["mat.dzialania"], "summary": "Potęga o wykładniku naturalnym, mnożenie/dzielenie potęg, pierwiastek kwadratowy i sześcienny, notacja wykładnicza." },
+    { "id": "mat.wyrazenia", "subject": "matematyka", "name": "Wyrażenia algebraiczne", "tier": 2, "difficulty": 3, "examWeight": 4, "prereq": ["mat.dzialania"], "summary": "Budowanie i upraszczanie wyrażeń, redukcja wyrazów podobnych, wyłączanie wspólnego czynnika." },
+    { "id": "mat.rownania", "subject": "matematyka", "name": "Równania", "tier": 3, "difficulty": 4, "examWeight": 4, "prereq": ["mat.wyrazenia", "mat.ulamki"], "summary": "Równania pierwszego stopnia z jedną niewiadomą, przekształcanie wzorów, równania z procentami." },
+    { "id": "mat.proporcje", "subject": "matematyka", "name": "Proporcjonalność i prędkość", "tier": 3, "difficulty": 3, "examWeight": 4, "prereq": ["mat.procenty", "mat.rownania"], "summary": "Proporcja prosta, skala, prędkość-droga-czas, przeliczanie jednostek." },
+    { "id": "mat.uklad", "subject": "matematyka", "name": "Układ współrzędnych", "tier": 3, "difficulty": 3, "examWeight": 3, "prereq": ["mat.dzialania"], "summary": "Punkty w układzie, odległości w pionie/poziomie, odczyt wykresów i tabel." },
+    { "id": "mat.figury", "subject": "matematyka", "name": "Figury płaskie", "tier": 3, "difficulty": 3, "examWeight": 5, "prereq": ["mat.dzialania", "mat.ulamki"], "summary": "Pola i obwody trójkątów, czworokątów, koła; jednostki pola." },
+    { "id": "mat.katy", "subject": "matematyka", "name": "Kąty i trójkąty", "tier": 3, "difficulty": 3, "examWeight": 3, "prereq": ["mat.figury"], "summary": "Suma kątów, kąty przyległe/wierzchołkowe, własności trójkątów i czworokątów." },
+    { "id": "mat.pitagoras", "subject": "matematyka", "name": "Twierdzenie Pitagorasa", "tier": 4, "difficulty": 4, "examWeight": 4, "prereq": ["mat.figury", "mat.potegi"], "summary": "Zależność boków w trójkącie prostokątnym, przekątne, zastosowania w bryłach." },
+    { "id": "mat.bryly", "subject": "matematyka", "name": "Graniastosłupy i ostrosłupy", "tier": 4, "difficulty": 4, "examWeight": 4, "prereq": ["mat.figury", "mat.pitagoras"], "summary": "Pole powierzchni i objętość brył, siatki, jednostki objętości." },
+    { "id": "mat.statystyka", "subject": "matematyka", "name": "Statystyka i odczyt danych", "tier": 3, "difficulty": 2, "examWeight": 3, "prereq": ["mat.procenty", "mat.uklad"], "summary": "Średnia, mediana, odczyt diagramów i tabel, interpretacja danych." },
+    { "id": "mat.prawdopodobienstwo", "subject": "matematyka", "name": "Proste prawdopodobieństwo", "tier": 4, "difficulty": 3, "examWeight": 2, "prereq": ["mat.ulamki", "mat.statystyka"], "summary": "Zdarzenia, liczba przypadków sprzyjających, prawdopodobieństwo jako ułamek." },
+    { "id": "mat.zadania-tekstowe", "subject": "matematyka", "name": "Zadania tekstowe", "tier": 5, "difficulty": 5, "examWeight": 5, "prereq": ["mat.rownania", "mat.procenty", "mat.proporcje"], "summary": "Tłumaczenie treści na model matematyczny — najczęstsze źródło utraty punktów." },
+
+    { "id": "pol.czytanie", "subject": "polski", "name": "Czytanie ze zrozumieniem", "tier": 1, "difficulty": 2, "examWeight": 5, "prereq": [], "summary": "Wyszukiwanie informacji, wnioskowanie, intencja autora, prawda/fałsz." },
+    { "id": "pol.srodki", "subject": "polski", "name": "Środki stylistyczne", "tier": 2, "difficulty": 3, "examWeight": 3, "prereq": ["pol.czytanie"], "summary": "Metafora, epitet, porównanie, apostrofa — rozpoznawanie i funkcja." },
+    { "id": "pol.lektury", "subject": "polski", "name": "Znajomość lektur", "tier": 2, "difficulty": 3, "examWeight": 5, "prereq": ["pol.czytanie"], "summary": "Bohaterowie, wątki, problematyka lektur obowiązkowych." },
+    { "id": "pol.argumentacja", "subject": "polski", "name": "Argumentacja", "tier": 3, "difficulty": 4, "examWeight": 4, "prereq": ["pol.lektury"], "summary": "Teza, argument, przykład z lektury i z życia, kontrargument." },
+    { "id": "pol.skladnia", "subject": "polski", "name": "Składnia i fleksja", "tier": 2, "difficulty": 3, "examWeight": 3, "prereq": ["pol.czytanie"], "summary": "Części mowy i zdania, związki wyrazowe, poprawność gramatyczna." },
+    { "id": "pol.ortografia", "subject": "polski", "name": "Ortografia i interpunkcja", "tier": 1, "difficulty": 2, "examWeight": 3, "prereq": [], "summary": "Zasady pisowni, przecinki, zapis dialogu — kluczowe w wypracowaniu." },
+    { "id": "pol.rozprawka", "subject": "polski", "name": "Rozprawka", "tier": 4, "difficulty": 5, "examWeight": 5, "prereq": ["pol.argumentacja", "pol.ortografia", "pol.skladnia"], "summary": "Wstęp-teza, rozwinięcie z argumentami, zakończenie. Ok. połowa punktów z polskiego." },
+    { "id": "pol.opowiadanie", "subject": "polski", "name": "Opowiadanie twórcze", "tier": 4, "difficulty": 5, "examWeight": 5, "prereq": ["pol.srodki", "pol.ortografia", "pol.skladnia"], "summary": "Fabuła, narracja, dialog, opis, kompozycja — alternatywa dla rozprawki." },
+
+    { "id": "ang.sluchanie", "subject": "angielski", "name": "Rozumienie ze słuchu", "tier": 1, "difficulty": 3, "examWeight": 4, "prereq": [], "summary": "Globalne i szczegółowe rozumienie nagrań, intencja mówiącego." },
+    { "id": "ang.slownictwo", "subject": "angielski", "name": "Słownictwo tematyczne", "tier": 1, "difficulty": 2, "examWeight": 4, "prereq": [], "summary": "Zakresy tematyczne: dom, szkoła, praca, podróże, zdrowie, technika." },
+    { "id": "ang.czytanie", "subject": "angielski", "name": "Rozumienie tekstów", "tier": 2, "difficulty": 3, "examWeight": 4, "prereq": ["ang.slownictwo"], "summary": "Dopasowanie nagłówków, prawda/fałsz, uzupełnianie luk w tekście." },
+    { "id": "ang.funkcje", "subject": "angielski", "name": "Funkcje językowe", "tier": 2, "difficulty": 3, "examWeight": 4, "prereq": ["ang.slownictwo"], "summary": "Reagowanie językowe: prośba, propozycja, przeprosiny, rada." },
+    { "id": "ang.gramatyka", "subject": "angielski", "name": "Środki językowe (gramatyka)", "tier": 2, "difficulty": 4, "examWeight": 4, "prereq": ["ang.slownictwo"], "summary": "Czasy, przedimki, przyimki, stopniowanie, słowotwórstwo." },
+    { "id": "ang.pisanie", "subject": "angielski", "name": "Wypowiedź pisemna", "tier": 3, "difficulty": 4, "examWeight": 5, "prereq": ["ang.gramatyka", "ang.funkcje"], "summary": "Krótki e-mail/wpis: realizacja 3 punktów polecenia, spójność, poprawność." }
+  ]
+}

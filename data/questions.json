@@ -1,0 +1,164 @@
+{
+  "$schema": "./schema/questions.schema.md",
+  "version": "2026-05-31",
+  "license": "CC-BY-SA-4.0",
+  "description": "Bank zadań w stylu egzaminu ósmoklasisty. Pole 'misconceptions' opisuje, jaki RODZAJ błędu kryje się za każdą złą odpowiedzią — to zasila model poznawczy ucznia (cyfrowego bliźniaka).",
+  "errorTypes": {
+    "rachunek": "Błąd rachunkowy / nieuwaga w obliczeniach",
+    "polecenie": "Złe odczytanie polecenia / odpowiedź na inne pytanie",
+    "koncept": "Brak zrozumienia pojęcia / metody",
+    "pamiec": "Luka w wiedzy do zapamiętania (wzór, fakt, lektura)",
+    "jezyk": "Błąd językowy / gramatyczny"
+  },
+  "questions": [
+    {
+      "id": "q.mat.proc.1",
+      "subject": "matematyka",
+      "nodeId": "mat.procenty",
+      "type": "single",
+      "difficulty": 2,
+      "stem": "Bluza kosztowała 80 zł. Jej cenę obniżono o 15%. Ile kosztuje po obniżce?",
+      "options": ["68 zł", "65 zł", "12 zł", "92 zł"],
+      "answerIndex": 0,
+      "misconceptions": ["", "rachunek", "polecenie", "koncept"],
+      "explanation": "15% z 80 zł = 0,15 × 80 = 12 zł obniżki. 80 − 12 = 68 zł. Odpowiedź 12 zł to tylko wartość obniżki (błąd: odpowiedź na inne pytanie), a 92 zł to podwyżka zamiast obniżki."
+    },
+    {
+      "id": "q.mat.proc.2",
+      "subject": "matematyka",
+      "nodeId": "mat.procenty",
+      "type": "single",
+      "difficulty": 3,
+      "stem": "W klasie jest 25 uczniów. 60% z nich to dziewczęta. Ilu jest chłopców?",
+      "options": ["10", "15", "12", "9"],
+      "answerIndex": 0,
+      "misconceptions": ["", "polecenie", "rachunek", "rachunek"],
+      "explanation": "Dziewczęta: 60% z 25 = 15. Chłopcy: 25 − 15 = 10. Odpowiedź 15 to liczba dziewcząt — typowe odpowiedzenie na inne pytanie."
+    },
+    {
+      "id": "q.mat.pit.1",
+      "subject": "matematyka",
+      "nodeId": "mat.pitagoras",
+      "type": "single",
+      "difficulty": 3,
+      "stem": "Przyprostokątne trójkąta prostokątnego mają długości 3 cm i 4 cm. Jaka jest długość przeciwprostokątnej?",
+      "options": ["5 cm", "7 cm", "25 cm", "√7 cm"],
+      "answerIndex": 0,
+      "misconceptions": ["", "koncept", "rachunek", "koncept"],
+      "explanation": "c² = 3² + 4² = 9 + 16 = 25, więc c = √25 = 5 cm. Odpowiedź 7 to dodanie boków (3+4) — częsty błąd koncepcyjny. 25 to zapomnienie o pierwiastku."
+    },
+    {
+      "id": "q.mat.pole.1",
+      "subject": "matematyka",
+      "nodeId": "mat.figury",
+      "type": "single",
+      "difficulty": 2,
+      "stem": "Prostokąt ma wymiary 6 cm × 4 cm. Jakie jest jego pole?",
+      "options": ["24 cm²", "20 cm²", "24 cm", "10 cm²"],
+      "answerIndex": 0,
+      "misconceptions": ["", "rachunek", "koncept", "koncept"],
+      "explanation": "Pole = a × b = 6 × 4 = 24 cm². Odpowiedź 20 cm to obwód (2·(6+4)) — pomylenie pola z obwodem. Jednostka pola to cm², nie cm."
+    },
+    {
+      "id": "q.mat.rown.1",
+      "subject": "matematyka",
+      "nodeId": "mat.rownania",
+      "type": "single",
+      "difficulty": 3,
+      "stem": "Rozwiąż równanie: 3x − 7 = 11.",
+      "options": ["x = 6", "x = 4", "x = 18", "x = 1,33"],
+      "answerIndex": 0,
+      "misconceptions": ["", "rachunek", "koncept", "koncept"],
+      "explanation": "3x = 11 + 7 = 18, więc x = 18 : 3 = 6. Odpowiedź 18 to zatrzymanie się przed dzieleniem przez 3."
+    },
+    {
+      "id": "q.mat.statyst.1",
+      "subject": "matematyka",
+      "nodeId": "mat.statystyka",
+      "type": "single",
+      "difficulty": 2,
+      "stem": "Uczeń dostał oceny: 4, 5, 3, 4, 4. Jaka jest średnia arytmetyczna?",
+      "options": ["4", "4,5", "3", "20"],
+      "answerIndex": 0,
+      "misconceptions": ["", "rachunek", "koncept", "polecenie"],
+      "explanation": "Suma = 4+5+3+4+4 = 20, liczb jest 5, więc średnia = 20 : 5 = 4. Odpowiedź 20 to sama suma bez dzielenia."
+    },
+    {
+      "id": "q.pol.czyt.1",
+      "subject": "polski",
+      "nodeId": "pol.czytanie",
+      "type": "truefalse",
+      "difficulty": 2,
+      "stem": "W zdaniu 'Choć padał deszcz, wyruszyli w góry' wynika, że pogoda zniechęciła bohaterów do wyjścia.",
+      "options": ["Prawda", "Fałsz"],
+      "answerIndex": 1,
+      "misconceptions": ["polecenie", ""],
+      "explanation": "Spójnik 'choć' wprowadza przeciwieństwo — mimo deszczu wyruszyli. Wniosek przeciwny do treści to klasyczny błąd czytania ze zrozumieniem."
+    },
+    {
+      "id": "q.pol.srodki.1",
+      "subject": "polski",
+      "nodeId": "pol.srodki",
+      "type": "single",
+      "difficulty": 2,
+      "stem": "Który środek stylistyczny występuje w wyrażeniu 'morze gwiazd'?",
+      "options": ["Metafora", "Porównanie", "Epitet", "Apostrofa"],
+      "answerIndex": 0,
+      "misconceptions": ["", "koncept", "koncept", "koncept"],
+      "explanation": "'Morze gwiazd' to przenośnia (metafora) — nie ma słowa 'jak' (więc nie porównanie) ani przymiotnika określającego (epitet)."
+    },
+    {
+      "id": "q.pol.rozpr.1",
+      "subject": "polski",
+      "nodeId": "pol.rozprawka",
+      "type": "single",
+      "difficulty": 3,
+      "stem": "Które polecenie wskazuje, że należy napisać rozprawkę?",
+      "options": [
+        "Czy warto pomagać innym? Uzasadnij swoje zdanie, odwołując się do lektury.",
+        "Opisz najpiękniejszy dzień wakacji.",
+        "Napisz opowiadanie o niezwykłej przygodzie.",
+        "Zredaguj zaproszenie na szkolny apel."
+      ],
+      "answerIndex": 0,
+      "misconceptions": ["", "koncept", "koncept", "koncept"],
+      "explanation": "Słowa 'Czy...?' oraz 'Uzasadnij swoje zdanie' to sygnał rozprawki — trzeba postawić tezę i poprzeć ją argumentami. Pozostałe to formy: opis, opowiadanie, zaproszenie."
+    },
+    {
+      "id": "q.ang.gram.1",
+      "subject": "angielski",
+      "nodeId": "ang.gramatyka",
+      "type": "single",
+      "difficulty": 3,
+      "stem": "Choose the correct option: 'I ___ to London last year.'",
+      "options": ["went", "have gone", "go", "going"],
+      "answerIndex": 0,
+      "misconceptions": ["", "koncept", "jezyk", "jezyk"],
+      "explanation": "'last year' to sygnał czasu przeszłego dokonanego w przeszłości → Past Simple: 'went'. 'have gone' (Present Perfect) nie łączy się z 'last year'."
+    },
+    {
+      "id": "q.ang.funk.1",
+      "subject": "angielski",
+      "nodeId": "ang.funkcje",
+      "type": "single",
+      "difficulty": 2,
+      "stem": "What is the best response to: 'Thank you so much for your help!'",
+      "options": ["You're welcome.", "Yes, I am.", "It's blue.", "At 5 o'clock."],
+      "answerIndex": 0,
+      "misconceptions": ["", "jezyk", "polecenie", "polecenie"],
+      "explanation": "Reakcją na podziękowanie jest 'You're welcome'. Pozostałe odpowiadają na inne funkcje (pytanie o stan, kolor, godzinę)."
+    },
+    {
+      "id": "q.ang.slow.1",
+      "subject": "angielski",
+      "nodeId": "ang.slownictwo",
+      "type": "single",
+      "difficulty": 2,
+      "stem": "Which word does NOT belong to the topic 'school'?",
+      "options": ["saucepan", "teacher", "homework", "classroom"],
+      "answerIndex": 0,
+      "misconceptions": ["", "pamiec", "pamiec", "pamiec"],
+      "explanation": "'saucepan' (rondel) należy do tematu kuchnia/dom, nie szkoła. Pozostałe to słownictwo szkolne."
+    }
+  ]
+}

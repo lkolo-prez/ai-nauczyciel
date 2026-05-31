@@ -1,0 +1,44 @@
+name: Build Android APK
+
+# Builds an unsigned debug APK so anyone can install the app on Android.
+# Triggered manually or on version tags. iOS must be built on macOS/Xcode
+# (see docs/MOBILE.md) — GitHub-hosted macOS runners can be added later.
+on:
+  workflow_dispatch:
+  push:
+    tags: ['v*']
+
+jobs:
+  android:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - run: npm ci
+      - name: Build web bundle for mobile
+        run: BUILD_TARGET=mobile npm run build
+
+      - name: Add Android platform
+        run: npx cap add android
+
+      - name: Sync Capacitor
+        run: BUILD_TARGET=mobile npx cap sync android
+
+      - name: Build debug APK
+        working-directory: android
+        run: ./gradlew assembleDebug --no-daemon
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-nauczyciel-debug-apk
+          path: android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
