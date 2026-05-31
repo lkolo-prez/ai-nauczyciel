@@ -479,6 +479,208 @@
       "answerIndex": 0,
       "misconceptions": ["", "pamiec", "pamiec", "pamiec"],
       "explanation": "'doctor' = lekarz. teacher = nauczyciel, driver = kierowca, baker = piekarz."
+    },
+    {
+      "id": "q.mat.liczby.1",
+      "subject": "matematyka",
+      "nodeId": "mat.liczby",
+      "type": "single",
+      "difficulty": 2,
+      "stem": "Która liczba jest podzielna przez 3?",
+      "options": ["171", "100", "238", "404"],
+      "answerIndex": 0,
+      "misconceptions": ["", "koncept", "koncept", "koncept"],
+      "explanation": "Suma cyfr 171 = 1+7+1 = 9, a 9 dzieli się przez 3, więc 171 też. Dla 100 (suma 1), 238 (suma 13) i 404 (suma 8) sumy cyfr nie dzielą się przez 3."
+    },
+    {
+      "id": "q.mat.liczby.2",
+      "subject": "matematyka",
+      "nodeId": "mat.liczby",
+      "type": "single",
+      "difficulty": 3,
+      "stem": "Ile wynosi NWW liczb 4 i 6?",
+      "options": ["12", "24", "2", "10"],
+      "answerIndex": 0,
+      "misconceptions": ["", "rachunek", "koncept", "koncept"],
+      "explanation": "Wielokrotności 4: 4,8,12... ; 6: 6,12... Pierwsza wspólna to 12. Odpowiedź 24 to iloczyn 4·6 (nie zawsze równy NWW), a 2 to NWD."
+    },
+    {
+      "id": "q.mat.liczby.3",
+      "subject": "matematyka",
+      "nodeId": "mat.liczby",
+      "type": "single",
+      "difficulty": 2,
+      "stem": "Która z liczb jest liczbą pierwszą?",
+      "options": ["17", "21", "1", "15"],
+      "answerIndex": 0,
+      "misconceptions": ["", "koncept", "koncept", "koncept"],
+      "explanation": "17 ma tylko dwa dzielniki: 1 i 17 — jest pierwsza. 21 = 3·7, 15 = 3·5, a 1 z definicji nie jest liczbą pierwszą."
+    },
+    {
+      "id": "q.mat.jednostki.1",
+      "subject": "matematyka",
+      "nodeId": "mat.jednostki",
+      "type": "single",
+      "difficulty": 3,
+      "stem": "Ile centymetrów kwadratowych ma 2 m^2?",
+      "options": ["20000 cm^2", "200 cm^2", "2000 cm^2", "20 cm^2"],
+      "answerIndex": 0,
+      "misconceptions": ["", "koncept", "koncept", "koncept"],
+      "explanation": "1 m^2 = 10000 cm^2, więc 2 m^2 = 20000 cm^2. Przy polu przelicznik (100) podnosimy do kwadratu, dlatego nie 200."
+    },
+    {
+      "id": "q.mat.jednostki.2",
+      "subject": "matematyka",
+      "nodeId": "mat.jednostki",
+      "type": "single",
+      "difficulty": 2,
+      "stem": "Ile minut ma 2,5 godziny?",
+      "options": ["150 min", "120 min", "250 min", "145 min"],
+      "answerIndex": 0,
+      "misconceptions": ["", "rachunek", "koncept", "rachunek"],
+      "explanation": "2,5 · 60 = 150 minut. Częsty błąd to potraktowanie 2,5 jako 2 godz. i 50 min — ale 0,5 godziny to 30 minut."
+    },
+    {
+      "id": "q.mat.jednostki.3",
+      "subject": "matematyka",
+      "nodeId": "mat.jednostki",
+      "type": "single",
+      "difficulty": 3,
+      "stem": "Samochód jedzie 90 km/h. Ile to metrów na sekundę?",
+      "options": ["25 m/s", "324 m/s", "90 m/s", "15 m/s"],
+      "answerIndex": 0,
+      "misconceptions": ["", "koncept", "koncept", "rachunek"],
+      "explanation": "km/h na m/s dzielimy przez 3,6: 90 : 3,6 = 25 m/s."
+    },
+    {
+      "id": "q.pol.frazeologia.1",
+      "subject": "polski",
+      "nodeId": "pol.frazeologia",
+      "type": "single",
+      "difficulty": 2,
+      "stem": "Co oznacza frazeologizm 'mieć muchy w nosie'?",
+      "options": [
+        "Być w złym humorze, obrażać się",
+        "Być przeziębionym",
+        "Mieć alergię",
+        "Być roztargnionym"
+      ],
+      "answerIndex": 0,
+      "misconceptions": ["", "koncept", "koncept", "koncept"],
+      "explanation": "'Mieć muchy w nosie' to być nadąsanym, w złym humorze. Frazeologizmów nie tłumaczymy dosłownie."
+    },
+    {
+      "id": "q.pol.frazeologia.2",
+      "subject": "polski",
+      "nodeId": "pol.frazeologia",
+      "type": "single",
+      "difficulty": 3,
+      "stem": "Który wyraz jest antonimem (przeciwieństwem) słowa 'hojny'?",
+      "options": ["skąpy", "szczodry", "bogaty", "miły"],
+      "answerIndex": 0,
+      "misconceptions": ["", "koncept", "koncept", "koncept"],
+      "explanation": "'Hojny' (chętnie dający) ma przeciwieństwo 'skąpy'. 'Szczodry' to synonim, nie antonim."
+    },
+    {
+      "id": "q.pol.nadawca.1",
+      "subject": "polski",
+      "nodeId": "pol.nadawca",
+      "type": "single",
+      "difficulty": 3,
+      "stem": "Tekst zawiera dane, liczby i fakty, bez emocji. Jaki jest jego główny cel?",
+      "options": ["Poinformować", "Rozśmieszyć", "Wzruszyć", "Przestraszyć"],
+      "answerIndex": 0,
+      "misconceptions": ["", "koncept", "koncept", "koncept"],
+      "explanation": "Fakty i dane bez emocji wskazują na cel informacyjny. Sygnały emocjonalne (wykrzyknienia) wskazywałyby na perswazję lub wzruszenie."
+    },
+    {
+      "id": "q.pol.nadawca.2",
+      "subject": "polski",
+      "nodeId": "pol.nadawca",
+      "type": "truefalse",
+      "difficulty": 3,
+      "stem": "Zdanie 'No pięknie, znowu się spóźniłeś!' wyraża rzeczywisty zachwyt nadawcy.",
+      "options": ["Prawda", "Fałsz"],
+      "answerIndex": 1,
+      "misconceptions": ["polecenie", ""],
+      "explanation": "To ironia — nadawca mówi 'pięknie', ale ma na myśli coś przeciwnego (niezadowolenie). Kontekst zdradza intencję."
+    },
+    {
+      "id": "q.pol.formy.1",
+      "subject": "polski",
+      "nodeId": "pol.formy",
+      "type": "single",
+      "difficulty": 3,
+      "stem": "Którego elementu NIE może zabraknąć w zaproszeniu?",
+      "options": [
+        "Informacji kiedy i gdzie odbędzie się wydarzenie",
+        "Opisu pogody",
+        "Cytatu z lektury",
+        "Podpisu nieznanej osoby"
+      ],
+      "answerIndex": 0,
+      "misconceptions": ["", "koncept", "koncept", "koncept"],
+      "explanation": "Zaproszenie musi zawierać: kto zaprasza, kogo, na co oraz kiedy i gdzie. Brak terminu lub miejsca to utrata punktu."
+    },
+    {
+      "id": "q.ang.czasy.1",
+      "subject": "angielski",
+      "nodeId": "ang.czasy",
+      "type": "single",
+      "difficulty": 3,
+      "stem": "Choose the correct option: 'Look! It ___ outside.'",
+      "options": ["is raining", "rains", "rained", "has rained"],
+      "answerIndex": 0,
+      "misconceptions": ["", "koncept", "jezyk", "koncept"],
+      "explanation": "'Look!' wskazuje na czynność dziejącą się teraz → Present Continuous: 'is raining'. 'rains' (Present Simple) opisuje rutynę, nie tę chwilę."
+    },
+    {
+      "id": "q.ang.czasy.2",
+      "subject": "angielski",
+      "nodeId": "ang.czasy",
+      "type": "single",
+      "difficulty": 3,
+      "stem": "Choose the correct option: 'I ___ my homework yet.'",
+      "options": ["haven't finished", "didn't finished", "don't finish", "not finished"],
+      "answerIndex": 0,
+      "misconceptions": ["", "jezyk", "koncept", "jezyk"],
+      "explanation": "'yet' to sygnał Present Perfect: 'haven't finished'. Po 'haven't' używamy formy past participle (finished), bez 'did'."
+    },
+    {
+      "id": "q.ang.czasy.3",
+      "subject": "angielski",
+      "nodeId": "ang.czasy",
+      "type": "single",
+      "difficulty": 2,
+      "stem": "Choose the correct option: 'Every morning she ___ to school.'",
+      "options": ["walks", "is walking", "walked", "has walked"],
+      "answerIndex": 0,
+      "misconceptions": ["", "koncept", "koncept", "koncept"],
+      "explanation": "'Every morning' to rutyna → Present Simple z końcówką -s: 'walks'."
+    },
+    {
+      "id": "q.ang.slowotworstwo.1",
+      "subject": "angielski",
+      "nodeId": "ang.slowotworstwo",
+      "type": "single",
+      "difficulty": 3,
+      "stem": "Complete: 'She made an important ___.' (DECIDE)",
+      "options": ["decision", "decided", "deciding", "decisive"],
+      "answerIndex": 0,
+      "misconceptions": ["", "jezyk", "jezyk", "jezyk"],
+      "explanation": "Po 'an important' potrzebny rzeczownik: 'decision'. Końcówka -sion/-tion tworzy rzeczownik od czasownika."
+    },
+    {
+      "id": "q.ang.slowotworstwo.2",
+      "subject": "angielski",
+      "nodeId": "ang.slowotworstwo",
+      "type": "single",
+      "difficulty": 3,
+      "stem": "Complete: 'Be ___ with that knife!' (CARE)",
+      "options": ["careful", "careless", "caring", "carefully"],
+      "answerIndex": 0,
+      "misconceptions": ["", "koncept", "jezyk", "jezyk"],
+      "explanation": "'Be ___' wymaga przymiotnika o znaczeniu 'ostrożny': 'careful' (-ful = pełen czegoś). 'careless' znaczy przeciwnie — nieostrożny."
     }
   ]
 }

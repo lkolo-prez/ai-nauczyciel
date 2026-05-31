@@ -29,6 +29,7 @@ rynku pracy** — budując po drodze jego cyfrowy model poznawczy. Pełna,
 - [x] **Doradca kariery** — dopasowanie ścieżek do mocnych stron (Warstwa 17)
 - [x] Ekspansja treści: 24 mikrolekcje, 38 zadań w stylu CKE
 - [x] **Multijęzykowość PL/EN/UK** — system i18n, przełącznik języka (Warstwa 22)
+- [x] **Rozbudowa bazy wiedzy**: 36 węzłów grafu, 33 mikrolekcje, 53 zadania (liczby, jednostki, frazeologia, intencja nadawcy, formy użytkowe, czasy, słowotwórstwo)
 - [x] **Katalog arkuszy 2019–2025** (główny/dodatkowy/próbne) — metadane + linki
 - [ ] Rozbudowa banku zadań do pełnego pokrycia wymagań CKE (cel: 500+ zadań)
 - [ ] Analiza częstotliwości typów zadań z arkuszy (Warstwa 10)
