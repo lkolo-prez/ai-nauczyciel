@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { subjects, lessonsBySubject } from '../data';
+import { examSubjects as subjects, lessonsBySubject } from '../data';
 import { useStore } from '../lib/store';
 import { ERROR_TYPES } from '../lib/cognitive';
 import {

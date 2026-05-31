@@ -2,39 +2,38 @@
   "$schema": "./schema/subjects.schema.md",
   "version": "2026-05-31",
   "license": "CC-BY-SA-4.0",
+  "description": "Przedmioty szkoły podstawowej (klasy IV–VIII) wg podstawy programowej. Pole 'exam' wskazuje przedmioty egzaminu ósmoklasisty — one napędzają widok cyfrowego bliźniaka i symulator. Pozostałe tworzą pełną mapę edukacji (przeglądarka przedmiotów + grafy wiedzy).",
+  "areas": [
+    { "id": "jezyki", "name": "Języki", "color": "#22d3ee" },
+    { "id": "scisle", "name": "Przedmioty ścisłe", "color": "#7c5cff" },
+    { "id": "przyrodnicze", "name": "Przedmioty przyrodnicze", "color": "#34d399" },
+    { "id": "humanistyczne", "name": "Humanistyczne i społeczne", "color": "#fbbf24" },
+    { "id": "artystyczne", "name": "Artystyczne i techniczne", "color": "#fb7185" },
+    { "id": "zdrowie", "name": "Zdrowie i bezpieczeństwo", "color": "#9d86ff" }
+  ],
   "subjects": [
-    {
-      "id": "matematyka",
-      "name": "Matematyka",
-      "shortName": "MAT",
-      "color": "#7c5cff",
-      "icon": "∑",
-      "examMinutes": 100,
-      "maxPoints": 25,
-      "stage": "egzamin-osmoklasisty",
-      "description": "Logiczne myślenie, rachunki, geometria i odczytywanie informacji. Najczęstsze powody utraty punktów to czytanie polecenia i błędy rachunkowe, nie brak wiedzy."
-    },
-    {
-      "id": "polski",
-      "name": "Język polski",
-      "shortName": "POL",
-      "color": "#fb7185",
-      "icon": "✍",
-      "examMinutes": 120,
-      "maxPoints": 45,
-      "stage": "egzamin-osmoklasisty",
-      "description": "Czytanie ze zrozumieniem, znajomość lektur, argumentacja i wypracowanie (rozprawka lub opowiadanie). Wypracowanie to ok. połowa punktów."
-    },
-    {
-      "id": "angielski",
-      "name": "Język angielski",
-      "shortName": "ANG",
-      "color": "#22d3ee",
-      "icon": "🌐",
-      "examMinutes": 90,
-      "maxPoints": 55,
-      "stage": "egzamin-osmoklasisty",
-      "description": "Słuchanie, czytanie, znajomość funkcji językowych, środki językowe i krótka wypowiedź pisemna. Najczęściej wybierany język obcy na egzaminie."
-    }
+    { "id": "polski", "name": "Język polski", "shortName": "POL", "color": "#fb7185", "icon": "✍", "exam": true, "area": "humanistyczne", "grades": "IV–VIII", "examMinutes": 120, "maxPoints": 45, "stage": "egzamin-osmoklasisty", "description": "Czytanie ze zrozumieniem, lektury, argumentacja i wypracowanie. Wypracowanie to ok. połowa punktów." },
+    { "id": "matematyka", "name": "Matematyka", "shortName": "MAT", "color": "#7c5cff", "icon": "∑", "exam": true, "area": "scisle", "grades": "IV–VIII", "examMinutes": 100, "maxPoints": 25, "stage": "egzamin-osmoklasisty", "description": "Logiczne myślenie, rachunki, geometria i odczytywanie informacji." },
+    { "id": "angielski", "name": "Język angielski", "shortName": "ANG", "color": "#22d3ee", "icon": "🌐", "exam": true, "area": "jezyki", "grades": "IV–VIII", "examMinutes": 90, "maxPoints": 55, "stage": "egzamin-osmoklasisty", "description": "Słuchanie, czytanie, funkcje językowe, środki językowe i wypowiedź pisemna." },
+
+    { "id": "niemiecki", "name": "Język niemiecki", "shortName": "NIE", "color": "#22d3ee", "icon": "🗣️", "exam": false, "area": "jezyki", "grades": "VII–VIII", "stage": "podstawa-programowa", "description": "Drugi język obcy nowożytny: podstawy słownictwa, gramatyki i komunikacji." },
+
+    { "id": "informatyka", "name": "Informatyka", "shortName": "INF", "color": "#7c5cff", "icon": "💻", "exam": false, "area": "scisle", "grades": "IV–VIII", "stage": "podstawa-programowa", "description": "Algorytmika, programowanie, praca z danymi, bezpieczeństwo cyfrowe." },
+
+    { "id": "przyroda", "name": "Przyroda", "shortName": "PRZ", "color": "#34d399", "icon": "🌱", "exam": false, "area": "przyrodnicze", "grades": "IV", "stage": "podstawa-programowa", "description": "Wprowadzenie do nauk przyrodniczych: obserwacja, mapa, organizmy, pogoda." },
+    { "id": "biologia", "name": "Biologia", "shortName": "BIO", "color": "#34d399", "icon": "🧬", "exam": false, "area": "przyrodnicze", "grades": "V–VIII", "stage": "podstawa-programowa", "description": "Komórka, organizmy, organizm człowieka, ekologia i genetyka." },
+    { "id": "geografia", "name": "Geografia", "shortName": "GEO", "color": "#34d399", "icon": "🌍", "exam": false, "area": "przyrodnicze", "grades": "V–VIII", "stage": "podstawa-programowa", "description": "Mapa, krajobrazy, Polska, kontynenty, ludność i gospodarka." },
+    { "id": "chemia", "name": "Chemia", "shortName": "CHE", "color": "#34d399", "icon": "⚗️", "exam": false, "area": "przyrodnicze", "grades": "VII–VIII", "stage": "podstawa-programowa", "description": "Budowa materii, układ okresowy, reakcje, kwasy, zasady i sole." },
+    { "id": "fizyka", "name": "Fizyka", "shortName": "FIZ", "color": "#34d399", "icon": "🧲", "exam": false, "area": "przyrodnicze", "grades": "VII–VIII", "stage": "podstawa-programowa", "description": "Ruch, siły, energia, elektryczność, magnetyzm i optyka." },
+
+    { "id": "historia", "name": "Historia", "shortName": "HIS", "color": "#fbbf24", "icon": "📜", "exam": false, "area": "humanistyczne", "grades": "IV–VIII", "stage": "podstawa-programowa", "description": "Od starożytności do współczesności: chronologia, źródła, postaci i procesy." },
+    { "id": "wos", "name": "Wiedza o społeczeństwie", "shortName": "WOS", "color": "#fbbf24", "icon": "⚖️", "exam": false, "area": "humanistyczne", "grades": "VIII", "stage": "podstawa-programowa", "description": "Społeczeństwo, prawa człowieka, samorząd, ustrój RP i obywatelstwo." },
+
+    { "id": "plastyka", "name": "Plastyka", "shortName": "PLA", "color": "#fb7185", "icon": "🎨", "exam": false, "area": "artystyczne", "grades": "IV–VII", "stage": "podstawa-programowa", "description": "Środki plastyczne, kompozycja, barwa, dziedzictwo kultury i sztuki." },
+    { "id": "muzyka", "name": "Muzyka", "shortName": "MUZ", "color": "#fb7185", "icon": "🎵", "exam": false, "area": "artystyczne", "grades": "IV–VII", "stage": "podstawa-programowa", "description": "Notacja, rytm, gatunki, instrumenty i historia muzyki." },
+    { "id": "technika", "name": "Technika", "shortName": "TEC", "color": "#fb7185", "icon": "🔧", "exam": false, "area": "artystyczne", "grades": "IV–VI", "stage": "podstawa-programowa", "description": "Materiały, rysunek techniczny, bezpieczeństwo i karta rowerowa." },
+
+    { "id": "wf", "name": "Wychowanie fizyczne", "shortName": "WF", "color": "#9d86ff", "icon": "⚽", "exam": false, "area": "zdrowie", "grades": "IV–VIII", "stage": "podstawa-programowa", "description": "Sprawność, zdrowy styl życia, sport i zasady bezpieczeństwa." },
+    { "id": "edb", "name": "Edukacja dla bezpieczeństwa", "shortName": "EDB", "color": "#9d86ff", "icon": "🚑", "exam": false, "area": "zdrowie", "grades": "VIII", "stage": "podstawa-programowa", "description": "Pierwsza pomoc, zagrożenia, alarmowanie i ochrona ludności." }
   ]
 }

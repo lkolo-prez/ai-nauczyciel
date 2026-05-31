@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useStore } from '../lib/store';
-import { subjects } from '../data';
+import { examSubjects as subjects } from '../data';
 import { estimatedScore } from '../lib/cognitive';
 
 // Layer 17 — career explorer. From the student's subject strengths it suggests

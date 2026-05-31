@@ -1,8 +1,17 @@
 // The "cognitive twin": pure functions that turn raw activity into a model of
 // the learner — mastery per skill, dominant error type, score projection,
 // burnout risk and the prioritised "root gaps" in the knowledge graph.
-import { nodes, nodeById, nodesBySubject, errorTypeLabels } from '../data';
+import { nodes, nodeById, nodesBySubject, errorTypeLabels, examSubjects } from '../data';
 import type { ErrorType, KnowledgeNode } from './types';
+
+// Nodes that belong to exam subjects — the cognitive twin stays exam-focused
+// even though the knowledge base now spans the whole curriculum.
+const EXAM_SUBJECT_IDS = new Set(examSubjects.map((s) => s.id));
+export const examNodes = nodes.filter((n) => EXAM_SUBJECT_IDS.has(n.subject));
+export const isExamNode = (nodeId: string) => {
+  const n = nodeById.get(nodeId);
+  return n ? EXAM_SUBJECT_IDS.has(n.subject) : false;
+};
 
 export interface Attempt {
   questionId: string;

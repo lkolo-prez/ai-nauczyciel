@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { subjects, nodesBySubject } from '../data';
+import { examSubjects as subjects, nodesBySubject } from '../data';
 
 // Layer 13 — "Nauczyciel AI": a class dashboard. With no real backend yet, it
 // simulates a deterministic cohort so a teacher can see what the product offers:

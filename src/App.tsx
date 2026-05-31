@@ -13,6 +13,7 @@ import Generator from './pages/Generator';
 import Trends from './pages/Trends';
 import Teacher from './pages/Teacher';
 import Career from './pages/Career';
+import Subjects from './pages/Subjects';
 
 export default function App() {
   return (
@@ -32,6 +33,7 @@ export default function App() {
           <Route path="/trendy" element={<Trends />} />
           <Route path="/nauczyciel" element={<Teacher />} />
           <Route path="/kariera" element={<Career />} />
+          <Route path="/przedmioty" element={<Subjects />} />
           <Route path="/profil" element={<Profile />} />
         </Routes>
       </main>

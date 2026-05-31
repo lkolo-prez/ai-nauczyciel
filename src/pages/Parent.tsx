@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useStore } from '../lib/store';
-import { subjects } from '../data';
+import { examSubjects as subjects } from '../data';
 import { estimatedScore, rootGaps, burnoutRisk, streak } from '../lib/cognitive';
 import Ring from '../components/Ring';
 

@@ -9,9 +9,14 @@
 | `shortName` | string | Skrót (3 znaki) |
 | `color` | string | Kolor HEX dla UI |
 | `icon` | string | Emoji/znak |
-| `examMinutes` | number | Czas trwania egzaminu |
-| `maxPoints` | number | Maksymalna liczba punktów |
-| `stage` | string | Etap (np. `egzamin-osmoklasisty`) |
+| `exam` | boolean | Czy przedmiot egzaminu ósmoklasisty (napędza widok cyfrowego bliźniaka) |
+| `area` | string | `id` obszaru z `areas` (np. `przyrodnicze`) |
+| `grades` | string | Klasy nauczania, np. `IV–VIII` |
+| `stage` | string | Etap (`egzamin-osmoklasisty` lub `podstawa-programowa`) |
+| `examMinutes` | number? | Czas trwania egzaminu (tylko przedmioty egzaminacyjne) |
+| `maxPoints` | number? | Maksymalna liczba punktów (tylko egzaminacyjne) |
+
+Plik zawiera też listę `areas` (obszary przedmiotów): `id`, `name`, `color`.
 
 ## exam (exams.json)
 

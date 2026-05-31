@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { subjects } from '../data';
+import { examSubjects as subjects } from '../data';
 import { useStore } from '../lib/store';
 import { estimatedScore, projectScore } from '../lib/cognitive';
 import LineChart from '../components/charts/LineChart';
