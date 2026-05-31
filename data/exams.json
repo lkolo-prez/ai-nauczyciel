@@ -1,0 +1,52 @@
+{
+  "$schema": "./schema/exams.schema.md",
+  "version": "2026-05-31",
+  "license": "CC-BY-SA-4.0",
+  "description": "Katalog oficjalnych arkuszy i materiałów. Aplikacja NIE re-publikuje plików CKE — linkuje do oficjalnych źródeł. Plik jest punktem startowym pipeline'u danych (scripts/ingest).",
+  "officialSources": [
+    { "id": "cke", "name": "Centralna Komisja Egzaminacyjna — Egzamin ósmoklasisty", "url": "https://cke.gov.pl/egzamin-osmoklasisty/", "type": "arkusze-i-wymagania" },
+    { "id": "oke-krakow", "name": "OKE Kraków — archiwum arkuszy", "url": "https://www.oke.krakow.pl/", "type": "arkusze-archiwum" },
+    { "id": "zpe", "name": "Zintegrowana Platforma Edukacyjna (ZPE)", "url": "https://zpe.gov.pl/", "type": "podstawa-i-materialy" },
+    { "id": "men-podstawa", "name": "Podstawa programowa — MEN", "url": "https://podstawaprogramowa.pl/", "type": "podstawa-programowa" },
+    { "id": "dzu-2024-996", "name": "Dz.U. 2024 poz. 996 — wymagania egzaminacyjne", "url": "https://dziennikustaw.gov.pl/DU/2024/996", "type": "rozporzadzenie" },
+    { "id": "dzu-2025-1052", "name": "Dz.U. 2025 poz. 1052", "url": "https://dziennikustaw.gov.pl/DU/2025/1052", "type": "rozporzadzenie" }
+  ],
+  "exams": [
+    {
+      "id": "e8.2025.glowny",
+      "stage": "egzamin-osmoklasisty",
+      "year": 2025,
+      "session": "główny",
+      "subjects": ["polski", "matematyka", "angielski"],
+      "source": "cke",
+      "sourceUrl": "https://cke.gov.pl/egzamin-osmoklasisty/",
+      "ingested": false,
+      "note": "Arkusze, klucze i schematy oceniania dostępne na stronie CKE. Pobieranie i przetwarzanie: scripts/ingest-exams.mjs."
+    },
+    {
+      "id": "e8.2024.glowny",
+      "stage": "egzamin-osmoklasisty",
+      "year": 2024,
+      "session": "główny",
+      "subjects": ["polski", "matematyka", "angielski"],
+      "source": "cke",
+      "sourceUrl": "https://cke.gov.pl/egzamin-osmoklasisty/",
+      "ingested": false
+    },
+    {
+      "id": "e8.2023.glowny",
+      "stage": "egzamin-osmoklasisty",
+      "year": 2023,
+      "session": "główny",
+      "subjects": ["polski", "matematyka", "angielski"],
+      "source": "oke-krakow",
+      "sourceUrl": "https://www.oke.krakow.pl/",
+      "ingested": false
+    }
+  ],
+  "futureStages": [
+    { "id": "matura-podstawa", "name": "Matura podstawowa", "phase": "etap-3" },
+    { "id": "matura-rozszerzenie", "name": "Matura rozszerzona", "phase": "etap-3" },
+    { "id": "egzamin-zawodowy", "name": "Egzamin zawodowy", "phase": "etap-3" }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "AI Nauczyciel — Egzamin Ósmoklasisty",
+  "short_name": "AI Nauczyciel",
+  "description": "Otwarty, inteligentny system przygotowania do egzaminu ósmoklasisty: cyfrowy bliźniak ucznia, graf wiedzy, nauka jak TikTok i symulator wyniku.",
+  "lang": "pl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b1020",
+  "theme_color": "#0b1020",
+  "categories": ["education"],
+  "icons": [
+    { "src": "./icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "./icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
